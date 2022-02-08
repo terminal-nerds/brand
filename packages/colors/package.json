@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/package",
-	"type": "commonjs",
+	"type": "module",
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/",
 		"access": "public"
