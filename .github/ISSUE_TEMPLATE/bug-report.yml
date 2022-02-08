@@ -1,0 +1,112 @@
+#https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+---
+name: "🐛 Bug report"
+description: Report an issue or possible bug
+title: "[BUG REPORT]: "
+labels: ["🐛 bug"]
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Thanks for taking the time to fill out this bug report!
+
+    - type: checkboxes
+      id: terms
+      attributes:
+          description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/terminal-nerds/.github/blob/main/CODE_OF_CONDUCT.md)
+          label: Code of Conduct
+          options:
+              - label: I agree to follow this team's Code of Conduct
+                required: true
+
+    - type: dropdown
+      attributes:
+          description: Which brand asset(s) package(s) are affected?
+          label: Package(s)
+          multiple: true
+          options:
+              - colors
+              - fonts
+              - icons
+              - logo
+      validations:
+          required: true
+
+    - type: input
+      attributes:
+          description: Which version of the brand asset(s) package(s) were affected?
+          label: Version(s)
+          placeholder: 0.0.0
+      validations:
+          required: true
+
+    - type: dropdown
+      attributes:
+          description: Which browser have you used?
+          label: Browser
+          multiple: true
+          options:
+              - Android
+              - Brave
+              - Chrome
+              - DuckDuckGo
+              - Edge
+              - Firefox
+              - Safari
+              - Samsung
+              - Vivaldi
+              - other
+      validations:
+          required: false
+
+    - type: checkboxes
+      id: terms
+      attributes:
+          description: Does it affect the mobile version of the browser?
+          label: Mobile?
+          options:
+              - label: Yes, it affects mobile version as well
+              - label: Yes, it affects MOBILE only
+              - label: No, it doesn't affect mobile version
+                required: false
+
+    - type: input
+      attributes:
+          description: Which version of browser have you used?
+          label: Browser version
+          placeholder: 0.0.0
+      validations:
+          required: false
+
+    - type: dropdown
+      attributes:
+          description: What package manager are you using?
+          label: Package manager
+          multiple: false
+          options: [npm, pnpm, yarn]
+      validations:
+          required: false
+
+    - type: input
+      attributes:
+          description: Wich version of Node.js are you using?
+          label: Node.js Version
+          placeholder: 14.0, LTS, 17.0
+      validations:
+          required: false
+
+    - type: dropdown
+      attributes:
+          description: What operating system are you using?
+          label: Operating System
+          multiple: false
+          options: [Mac, Windows, Linux]
+      validations:
+          required: false
+
+    - type: textarea
+      attributes:
+          description: A clear and concise description of what the bug is. Please provide screenshot(s)/screencast(s) if i is a visual bug.
+          label: Bug description
+      validations:
+          required: true

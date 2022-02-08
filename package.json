@@ -1,0 +1,67 @@
+{
+	"$schema": "https://json.schemastore.org/package",
+	"private": true,
+	"type": "module",
+	"author": "Matt Kadlubowski <xeho91>",
+	"homepage": "https://github.com/terminal-nerds/brand",
+	"repository": "terminal-nerds/brand.git",
+	"bugs": "https://github.com/terminal-nerds/brand/issues",
+	"engines": {
+		"node": ">=16",
+		"pnpm": ">=6"
+	},
+	"volta": {
+		"node": "16.13.2"
+	},
+	"scripts": {
+		"build": "ultra --recursive --build build:all",
+		"clean": "ultra --root --recursive clean:all",
+		"clean:all": "pnpm clean:cache",
+		"clean:cache": "rimraf \"./node_modules/.cache\" ; rimraf \"./.ultra.cache.json\"",
+		"contributors:add": "all-contributors add",
+		"contributors:generate": "all-contributors generate",
+		"dependencies:mismatches": "syncpack list-mismatches",
+		"dependencies:upgrade:all": "pnpm dependencies:upgrade:root ; pnpm dependencies:upgrade:helpers ; pnpm dependencies:upgrade:packages",
+		"dependencies:upgrade:root": "pnpm upgrade --interactive --latest",
+		"dependencies:upgrade:helpers": "pnpm upgrade --interactive --latest --filter ./helpers",
+		"dependencies:upgrade:packages": "pnpm upgrade --interactive --latest --filter ./packages",
+		"dev": "ultra --recursive dev",
+		"format": "ultra --root --recursive format:all",
+		"format:all": "pnpm format:prettier ; pnpm format:syncpack",
+		"format:prettier": "pretty-quick --branch main --pattern \"**/*\" --pattern \"!{helpers,packages}/**/*\" --verbose",
+		"format:syncpack": "syncpack format",
+		"lint": "ultra --root --recursive --concurrency 50 lint:all",
+		"lint:all": "pnpm lint:format ; pnpm lint:js ; pnpm lint:md",
+		"lint:format": "pretty-quick --branch main --pattern \"**/*\" --pattern \"!{helpers,packages}/**/*\" --verbose --check",
+		"lint:js": "DEBUG=\"eslint:cli-engine\" eslint . --ext .cjs,.json,.yml,.yaml --ignore \"./packages\" --cache --cache-location \"./node_modules/.cache/eslint\"",
+		"lint:md": "markdownlint . --dot --ignore-path \"./.gitignore\" --ignore \"./{helpers,packages}/**/*\" --ignore \"./.changeset/*.md\"",
+		"lint:staged": "lint-staged --verbose",
+		"prepare": "husky install",
+		"preinstall": "npx only-allow pnpm"
+	},
+	"ultra": {
+		"concurrent": [
+			"clean:all",
+			"format:all",
+			"lint:all"
+		]
+	},
+	"devDependencies": {
+		"@changesets/changelog-github": "0.4.2",
+		"@changesets/cli": "2.20.0",
+		"@terminal-nerds/eslint-config": "0.2.0",
+		"@terminal-nerds/markdownlint-config": "0.2.0",
+		"@terminal-nerds/prettier-config": "0.1.2",
+		"@terminal-nerds/stylelint-config": "0.1.2",
+		"@terminal-nerds/typescript-config": "0.1.0",
+		"all-contributors-cli": "6.20.0",
+		"eslint": "8.8.0",
+		"husky": "7.0.4",
+		"lint-staged": "12.3.3",
+		"markdownlint-cli": "0.31.0",
+		"prettier": "2.5.1",
+		"pretty-quick": "3.1.3",
+		"rimraf": "3.0.2",
+		"syncpack": "^6.2.0"
+	}
+}

@@ -1,0 +1,23 @@
+# https://github.com/actions/labeler
+---
+"🏗️ continuous integration":
+    - .github/**/*
+
+"📓 documentation":
+    - README.md
+    - packages/*/README.md
+
+"📦 package:colors":
+    - packages/colors/**/*
+
+"📦 package:fonts":
+    - packages/fonts/**/*
+
+"📦 package:icon":
+    - packages/icon/**/*
+
+"📦 package:logo":
+    - packages/logo/**/*
+
+"🎉 release":
+    - packages/*/CHANGELOG.md

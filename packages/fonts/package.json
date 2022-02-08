@@ -1,0 +1,54 @@
+{
+	"$schema": "https://json.schemastore.org/package",
+	"type": "commonjs",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
+	},
+	"name": "@terminal-nerds/fonts",
+	"version": "0.0.0",
+	"description": "Terminal Nerds fonts.",
+	"keywords": [
+		"assets",
+		"fonts",
+		"brand"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/terminal-nerds/brand/tree/main/packages/fonts",
+	"repository": "terminal-nerds/brand.git",
+	"bugs": "https://github.com/terminal-nerds/brand/issues",
+	"engines": {
+		"node": ">=16"
+	},
+	"main": "dist/index.js",
+	"files": [
+		"/dist"
+	],
+	"scripts": {
+		"build": "ultra build:all",
+		"build:all": "pnpm build:package",
+		"build:package": "tsup",
+		"clean": "ultra clean:all",
+		"clean:all": "pnpm clean:build; pnpm clean:cache",
+		"clean:build": "rimraf \"./dist\"",
+		"clean:cache": "rimraf \"./node_modules/.cache\" ; rimraf \"./.ultra.cache.json\"",
+		"dev": "tsup --watch",
+		"format": "ultra format:all",
+		"format:all": "pnpm format:prettier ; pnpm format:syncpack",
+		"format:prettier": "pretty-quick --branch main --pattern \"./packages/fonts/**/*\" --verbose",
+		"format:syncpack": "syncpack format",
+		"lint": "ultra lint:all",
+		"lint:all": "pnpm lint:format ; pnpm lint:js ; pnpm lint:md ; pnpm lint:types",
+		"lint:format": "pretty-quick --branch main --pattern \"./packages/fonts/**/*\" --verbose --check",
+		"lint:js": "DEBUG=\"eslint:cli-engine\" eslint . --ext .json,.ts --config \"../../.eslintrc.cjs\" --cache --cache-location \"./node_modules/.cache/eslint\"",
+		"lint:md": "markdownlint . --dot --ignore-path \"../../.gitignore\" --config \"../../.markdownlint.json\"",
+		"lint:types": "tsc --noEmit"
+	},
+	"ultra": {
+		"concurrent": [
+			"clean:all",
+			"format:all",
+			"lint:all"
+		]
+	}
+}

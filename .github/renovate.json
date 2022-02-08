@@ -1,0 +1,43 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"assigneesFromCodeOwners": true,
+	"baseBranches": ["main"],
+	"dependencyDashboard": true,
+	"extends": ["config:base"],
+	"packageRules": [
+		{
+			"groupName": "helpers",
+			"labels": ["🧰 monorepo"],
+			"packagePatterns": ["pkg-up", "read-pkg-up", "type-fest"]
+		},
+		{
+			"groupName": "ESLint",
+			"labels": ["📦 package:eslint-config"],
+			"packagePatterns": ["eslint"]
+		},
+		{
+			"groupName": "markdownlint",
+			"labels": ["📦 package:markdownlint-config"],
+			"packagePatterns": ["markdownlint"]
+		},
+		{
+			"groupName": "Prettier",
+			"labels": ["📦 package:prettier-config"],
+			"packagePatterns": ["prettier"]
+		},
+		{
+			"groupName": "Stylelint",
+			"labels": ["📦 package:stylelint-config"],
+			"packagePatterns": ["stylelint"]
+		},
+		{
+			"groupName": "TypeScript",
+			"labels": ["📦 package:typescript-config"],
+			"packagePatterns": ["@types/node", "tslib", "tsup", "typescript"]
+		}
+	],
+	"reviewersFromCodeOwners": true,
+	"schedule": ["after 10pm and before 5am every weekday", "every weekend"],
+	"semanticCommits": "auto",
+	"semanticCommitScope": "dependencies"
+}
