@@ -20,10 +20,21 @@
 	"engines": {
 		"node": ">=16"
 	},
-	"main": "dist/index.js",
 	"files": [
 		"/dist"
 	],
+	"exports": {
+		".": "./dist/index.js",
+		"./palette": "./dist/palette/index.js",
+		"./palette/*.js": "./dist/palette/*.js"
+	},
+	"typesVersions": {
+		"*": {
+			"*": [
+				"./build/*"
+			]
+		}
+	},
 	"scripts": {
 		"build": "ultra build:all",
 		"build:all": "pnpm build:package",
@@ -50,5 +61,11 @@
 			"format:all",
 			"lint:all"
 		]
+	},
+	"devDependencies": {
+		"@types/chroma-js": "2.1.3",
+		"chroma-js": "2.4.2",
+		"tsup": "5.11.13",
+		"typescript": "4.5.5"
 	}
 }
