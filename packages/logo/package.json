@@ -25,9 +25,6 @@
 		"/dist"
 	],
 	"scripts": {
-		"build": "ultra build:all",
-		"build:all": "pnpm build:package",
-		"build:package": "tsup",
 		"clean": "ultra clean:all",
 		"clean:all": "pnpm clean:build; pnpm clean:cache",
 		"clean:build": "rimraf \"./dist\"",

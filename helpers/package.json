@@ -20,10 +20,6 @@
 		}
 	},
 	"scripts": {
-		"build": "ultra build:all",
-		"build:all": "pnpm build:module",
-		"build:types": "tsc --emitDeclarationOnly",
-		"build:module": "tsc --build --listEmittedFiles",
 		"clean": "ultra clean:all",
 		"clean:all": "pnpm clean:build ; pnpm clean:cache",
 		"clean:build": "rimraf \"./build\"",
