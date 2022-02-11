@@ -14,4 +14,14 @@ export class ColorPalette {
 		this.name = name;
 		this.swatches = swatches;
 	}
+
+	toJSON() {
+		const map = new Map();
+
+		for (const [swatch, parameters] of this.swatches) {
+			map.set(swatch, parameters.toJSON());
+		}
+
+		return JSON.stringify(Object.fromEntries(map));
+	}
 }

@@ -1,9 +1,6 @@
-import {
-	getHSLAParameters,
-	getLCHAParameters,
-	getRGBAParameters,
-} from "$helpers/color-parameters";
+import { getColorSettings } from "../color-settings";
 import type {
+	ColorSettings,
 	CSSFormats,
 	HEX,
 	HEXA,
@@ -13,19 +10,32 @@ import type {
 	LCHA,
 	RGB,
 	RGBA,
-} from "$helpers/color-parameters";
+} from "../color-settings";
 
-export class ColorParameters {
+export class ColorParameters implements ColorSettings {
 	public hex: HEX;
-	public hsla: HSLA;
-	public lcha: LCHA;
-	public rgba: RGBA;
+	public red: ColorSettings["red"];
+	public green: ColorSettings["green"];
+	public blue: ColorSettings["blue"];
+	public alpha: ColorSettings["alpha"];
+	public hue: ColorSettings["hue"];
+	public saturation: ColorSettings["saturation"];
+	public lightness: ColorSettings["lightness"];
+	public chroma: ColorSettings["chroma"];
 
 	constructor(baseHex: HEX) {
 		this.hex = baseHex;
-		this.hsla = getHSLAParameters(baseHex);
-		this.lcha = getLCHAParameters(baseHex);
-		this.rgba = getRGBAParameters(baseHex);
+
+		const settings = getColorSettings(baseHex);
+
+		this.red = settings.red;
+		this.green = settings.green;
+		this.blue = settings.blue;
+		this.alpha = settings.alpha;
+		this.chroma = settings.chroma;
+		this.hue = settings.hue;
+		this.lightness = settings.lightness;
+		this.saturation = settings.saturation;
 	}
 
 	get hexa(): HEXA {
@@ -33,25 +43,43 @@ export class ColorParameters {
 	}
 
 	get hsl(): HSL {
-		const { hue, saturation, lightness } = getHSLAParameters(this.hex);
+		return {
+			hue: this.hue,
+			saturation: this.saturation,
+			lightness: this.lightness,
+		};
+	}
 
-		return { hue, saturation, lightness };
+	get hsla(): HSLA {
+		return { ...this.hsl, alpha: this.alpha };
 	}
 
 	get lch(): LCH {
-		const { lightness, chroma, hue } = getLCHAParameters(this.hex);
+		return {
+			lightness: this.lightness,
+			chroma: this.chroma,
+			hue: this.hue,
+		};
+	}
 
-		return { lightness, chroma, hue };
+	get lcha(): LCHA {
+		return { ...this.lch, alpha: this.alpha };
 	}
 
 	get rgb(): RGB {
-		const { red, green, blue } = getRGBAParameters(this.hex);
-
-		return { red, green, blue };
+		return {
+			red: this.red,
+			green: this.green,
+			blue: this.blue,
+		};
 	}
 
-	getCSS<K extends keyof CSSFormats>(model: K): CSSFormats[K] {
-		switch (model) {
+	get rgba(): RGBA {
+		return { ...this.rgba, alpha: this.alpha };
+	}
+
+	getCSS<K extends keyof CSSFormats>(colorFunction: K): CSSFormats[K] {
+		switch (colorFunction) {
 			case "hex":
 				// @ts-ignore FIXME: I don't know how to fix it
 				return this.hex;
@@ -60,47 +88,47 @@ export class ColorParameters {
 				return this.hexa;
 
 			case "hsl": {
-				const { hue, saturation, lightness } = this.hsl;
-
 				// @ts-ignore FIXME: I don't know how to fix it
-				return `hsl(${hue}deg ${saturation}% ${lightness}%)`;
+				return `hsl(${this.hue}deg ${this.saturation}% ${this.lightness}%)`;
 			}
 			case "hsla": {
-				const { hue, saturation, lightness, alpha } = this.hsla;
-
 				// @ts-ignore FIXME: I don't know how to fix it
-				return `hsla(${hue}deg ${saturation}% ${lightness}% / ${alpha})`;
+				return `hsla(${this.hue}deg ${this.saturation}% ${this.lightness}% / ${this.alpha})`;
 			}
 
 			case "lch": {
-				const { hue, chroma, lightness } = this.lch;
-
 				// @ts-ignore FIXME: I don't know how to fix it
-				return `lch(${lightness}% ${chroma}% ${hue}deg)`;
+				return `lch(${this.lightness}% ${this.chroma}% ${this.hue}deg)`;
 			}
 			case "lcha": {
-				const { lightness, chroma, hue, alpha } = this.lcha;
-
 				// @ts-ignore FIXME: I don't know how to fix it
-				return `lcha(${lightness}% ${chroma}% ${hue}deg / ${alpha})`;
+				return `lcha(${this.lightness}% ${this.chroma}% ${this.hue}deg / ${this.alpha})`;
 			}
 
 			case "rgb": {
-				const { red, green, blue } = this.rgb;
-
 				// @ts-ignore FIXME: I don't know how to fix it
-				return `rgb(${red} ${green} ${blue})`;
+				return `rgb(${this.red} ${this.green} ${this.blue})`;
 			}
 			case "rgba": {
-				const { red, green, blue, alpha } = this.rgba;
-
 				// @ts-ignore FIXME: I don't know how to fix it
-				return `rgba(${red} ${green} ${blue} / ${alpha})`;
+				return `rgba(${this.red} ${this.green} ${this.blue} / ${this.alpha})`;
 			}
 
 			default: {
-				throw new Error(`Unrecognized color model: "${model}"!`);
+				throw new Error(
+					`Unrecognized color function: "${colorFunction}"!`,
+				);
 			}
 		}
+	}
+
+	toJSON() {
+		const map = new Map();
+
+		for (const key in this) {
+			map.set(key, this[key]);
+		}
+
+		return JSON.stringify(Object.fromEntries(map));
 	}
 }

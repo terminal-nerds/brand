@@ -1,15 +1,13 @@
-import {
-	Blue,
-	Cyan,
-	Green,
-	Magenta,
-	Neutral,
-	Red,
-	Yellow,
-} from "$palette/index";
+import Blue from "$palette/blue";
+import Cyan from "$palette/cyan";
+import Green from "$palette/green";
+import Magenta from "$palette/magenta";
+import Neutral from "$palette/neutral";
+import Red from "$palette/red";
+import Yellow from "$palette/yellow";
 
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-export const COLORS = {
+export const PRIMARY_COLORS = {
 	black: Neutral.swatches.get(900)!,
 	brightBlack: Neutral.swatches.get(800)!,
 
@@ -36,8 +34,8 @@ export const COLORS = {
 } as const;
 /* eslint-enable @typescript-eslint/no-non-null-assertion */
 
-export type ColorName = keyof typeof COLORS;
+export type PrimaryColorName = keyof typeof PRIMARY_COLORS;
 
-export const COLOR_NAMES = new Set<ColorName>(
-	Object.keys(COLORS) as Array<ColorName>,
+export const PRIMARY_COLOR_NAMES = new Set<PrimaryColorName>(
+	Object.keys(PRIMARY_COLORS) as Array<PrimaryColorName>,
 );
