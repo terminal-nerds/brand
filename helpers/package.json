@@ -8,9 +8,7 @@
 		"node": ">=16.0.0"
 	},
 	"exports": {
-		"./*": "./build/index.js",
-		"./environment": "./build/environment.js",
-		"./module": "./build/module.js"
+		"./number": "./build/number.js"
 	},
 	"typesVersions": {
 		"*": {
@@ -20,11 +18,12 @@
 		}
 	},
 	"scripts": {
+		"build": "tsup",
 		"clean": "ultra clean:all",
 		"clean:all": "pnpm clean:build ; pnpm clean:cache",
 		"clean:build": "rimraf \"./build\"",
 		"clean:cache": "rimraf \"./node_modules/.cache\" ; rimraf \"./.ultra.cache.json\"",
-		"dev": "tsc --build --watch",
+		"dev": "tsup --watch",
 		"format": "ultra format:all",
 		"format:all": "pnpm format:prettier ; pnpm format:syncpack",
 		"format:prettier": "pretty-quick --branch develop --pattern \"./helpers/**/*\" --verbose",
@@ -45,7 +44,7 @@
 	"devDependencies": {
 		"@terminal-nerds/typescript-config": "0.1.0",
 		"@types/node": "17.0.15",
-		"tslib": "2.3.1",
+		"tsup": "5.11.13",
 		"type-fest": "2.11.1",
 		"typescript": "4.5.5"
 	}
