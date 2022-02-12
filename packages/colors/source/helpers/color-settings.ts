@@ -36,7 +36,7 @@ export interface ColorSettings {
 export type ColorSetting = keyof ColorSettings;
 
 export type HEX = string;
-export type HEXA = `${string}00`;
+export type HEXA = `${string}FF`;
 
 export type HSL = Pick<ColorSettings, "hue" | "saturation" | "lightness">;
 // prettier-ignore

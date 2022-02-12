@@ -123,7 +123,7 @@ function setColorFunctionVariableWithAlpha(
 	return setVariable(
 		name,
 		colorFormat,
-		`var(--${name}_${colorFormat.slice(0, -1)}) var(--${name}_alpha)`,
+		`var(--${name}_${colorFormat.slice(0, -1)}) / var(--${name}_alpha)`,
 	);
 }
 

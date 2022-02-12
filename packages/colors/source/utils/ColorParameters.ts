@@ -49,7 +49,7 @@ export class ColorParameters implements ColorSettings {
 	}
 
 	get hexa(): HEXA {
-		return `${this.hex}00`;
+		return `${this.hex}FF`;
 	}
 
 	get hsl(): HSL {

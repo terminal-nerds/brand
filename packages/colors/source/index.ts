@@ -1,15 +1,15 @@
 import Blue from "$palette/blue";
 import Cyan from "$palette/cyan";
+import Gray from "$palette/gray";
 import Green from "$palette/green";
 import Magenta from "$palette/magenta";
-import Neutral from "$palette/neutral";
 import Red from "$palette/red";
 import Yellow from "$palette/yellow";
 
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 export const PRIMARY_COLORS = {
-	black: Neutral.swatches.get(900)!,
-	brightBlack: Neutral.swatches.get(800)!,
+	black: Gray.swatches.get(900)!,
+	brightBlack: Gray.swatches.get(800)!,
 
 	blue: Blue.swatches.get(500)!,
 	brightBlue: Blue.swatches.get(400)!,
@@ -29,8 +29,8 @@ export const PRIMARY_COLORS = {
 	yellow: Yellow.swatches.get(500)!,
 	brightYellow: Yellow.swatches.get(400)!,
 
-	white: Neutral.swatches.get(50)!,
-	brightWhite: Neutral.swatches.get(100)!,
+	white: Gray.swatches.get(50)!,
+	brightWhite: Gray.swatches.get(100)!,
 } as const;
 /* eslint-enable @typescript-eslint/no-non-null-assertion */
 
