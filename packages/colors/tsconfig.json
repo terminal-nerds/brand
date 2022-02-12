@@ -8,14 +8,15 @@
 		"module": "ESNext",
 		"outDir": "./dist",
 		"paths": {
-			"$helpers/*": ["source/helpers/*"],
+			"$colors": ["./source/index"],
+			"$helpers/*": ["./source/helpers/*"],
 			"$palette/*": ["source/palette/*"],
 			"$utils/*": ["source/utils/*"]
 		},
-		"rootDir": "./source",
+		"rootDir": ".",
 		"tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo",
 		"types": ["chroma-js", "node"]
 	},
 	"exclude": ["dist/", "node_modules/"],
-	"include": ["source/"]
+	"include": ["scripts/", "source/"]
 }

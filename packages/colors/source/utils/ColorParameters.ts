@@ -1,7 +1,7 @@
-import { getColorSettings } from "../color-settings";
+import { getColorSettings } from "$helpers/color-settings";
 import type {
+	ColorFunction,
 	ColorSettings,
-	CSSFormats,
 	HEX,
 	HEXA,
 	HSL,
@@ -10,32 +10,42 @@ import type {
 	LCHA,
 	RGB,
 	RGBA,
-} from "../color-settings";
+} from "$helpers/color-settings";
+import {
+	createCSSVariablesHEX,
+	createCSSVariablesHSL,
+	createCSSVariablesLCH,
+	createCSSVariablesRGB,
+	getCSS,
+} from "$helpers/css";
 
 export class ColorParameters implements ColorSettings {
+	public alpha: ColorSettings["alpha"];
+	public chroma: ColorSettings["chroma"];
+	public hue: ColorSettings["hue"];
+	public lightness: ColorSettings["lightness"];
+	public saturation: ColorSettings["saturation"];
+
 	public hex: HEX;
+
 	public red: ColorSettings["red"];
 	public green: ColorSettings["green"];
 	public blue: ColorSettings["blue"];
-	public alpha: ColorSettings["alpha"];
-	public hue: ColorSettings["hue"];
-	public saturation: ColorSettings["saturation"];
-	public lightness: ColorSettings["lightness"];
-	public chroma: ColorSettings["chroma"];
 
 	constructor(baseHex: HEX) {
-		this.hex = baseHex;
-
 		const settings = getColorSettings(baseHex);
 
-		this.red = settings.red;
-		this.green = settings.green;
-		this.blue = settings.blue;
 		this.alpha = settings.alpha;
 		this.chroma = settings.chroma;
 		this.hue = settings.hue;
 		this.lightness = settings.lightness;
 		this.saturation = settings.saturation;
+
+		this.hex = baseHex;
+
+		this.red = settings.red;
+		this.green = settings.green;
+		this.blue = settings.blue;
 	}
 
 	get hexa(): HEXA {
@@ -75,51 +85,43 @@ export class ColorParameters implements ColorSettings {
 	}
 
 	get rgba(): RGBA {
-		return { ...this.rgba, alpha: this.alpha };
+		return { ...this.rgb, alpha: this.alpha };
 	}
 
-	getCSS<K extends keyof CSSFormats>(colorFunction: K): CSSFormats[K] {
+	createCSSVariables(name: string, colorFunction: ColorFunction) {
 		switch (colorFunction) {
-			case "hex":
-				// @ts-ignore FIXME: I don't know how to fix it
-				return this.hex;
-			case "hexa":
-				// @ts-ignore FIXME: I don't know how to fix it
-				return this.hexa;
+			case "hex": {
+				return createCSSVariablesHEX(name, this.hex);
+			}
+			case "hexa": {
+				return createCSSVariablesHEX(name, this.hexa);
+			}
 
 			case "hsl": {
-				// @ts-ignore FIXME: I don't know how to fix it
-				return `hsl(${this.hue}deg ${this.saturation}% ${this.lightness}%)`;
+				return createCSSVariablesHSL(name, this.hsl);
 			}
 			case "hsla": {
-				// @ts-ignore FIXME: I don't know how to fix it
-				return `hsla(${this.hue}deg ${this.saturation}% ${this.lightness}% / ${this.alpha})`;
+				return createCSSVariablesHSL(name, this.hsla, true);
 			}
 
 			case "lch": {
-				// @ts-ignore FIXME: I don't know how to fix it
-				return `lch(${this.lightness}% ${this.chroma}% ${this.hue}deg)`;
+				return createCSSVariablesLCH(name, this.lch);
 			}
 			case "lcha": {
-				// @ts-ignore FIXME: I don't know how to fix it
-				return `lcha(${this.lightness}% ${this.chroma}% ${this.hue}deg / ${this.alpha})`;
+				return createCSSVariablesLCH(name, this.lcha, true);
 			}
 
 			case "rgb": {
-				// @ts-ignore FIXME: I don't know how to fix it
-				return `rgb(${this.red} ${this.green} ${this.blue})`;
+				return createCSSVariablesRGB(name, this.rgb);
 			}
 			case "rgba": {
-				// @ts-ignore FIXME: I don't know how to fix it
-				return `rgba(${this.red} ${this.green} ${this.blue} / ${this.alpha})`;
-			}
-
-			default: {
-				throw new Error(
-					`Unrecognized color function: "${colorFunction}"!`,
-				);
+				return createCSSVariablesRGB(name, this.rgba, true);
 			}
 		}
+	}
+
+	getCSS(colorFunction: ColorFunction) {
+		return getCSS(colorFunction, this);
 	}
 
 	toJSON() {

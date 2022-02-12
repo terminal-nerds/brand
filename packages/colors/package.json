@@ -25,6 +25,8 @@
 	],
 	"exports": {
 		".": "./dist/index.js",
+		"./styles/*.css": "./dist/styles/*.css",
+		"./data/*.json": "./dist/data/*.json",
 		"./palette": "./dist/palette/index.js",
 		"./palette/*.js": "./dist/palette/*.js"
 	},
@@ -37,8 +39,10 @@
 	},
 	"scripts": {
 		"build": "ultra build:all",
-		"build:all": "pnpm build:package",
-		"build:package": "tsup",
+		"build:all": "pnpm build:module && pnpm build:data ; pnpm build:styles",
+		"build:data": "esrun \"./scripts/build-data.ts\"",
+		"build:module": "tsup",
+		"build:styles": "esrun \"./scripts/build-styles.ts\"",
 		"clean": "ultra clean:all",
 		"clean:all": "pnpm clean:build; pnpm clean:cache",
 		"clean:build": "rimraf \"./dist\"",
@@ -63,8 +67,18 @@
 		]
 	},
 	"devDependencies": {
+		"@digitak/esrun": "^3.1.2",
+		"@parcel/css": "^1.2.0",
 		"@types/chroma-js": "2.1.3",
+		"@types/fs-extra": "^9.0.13",
+		"@types/postcss-import": "^14.0.0",
+		"@workspace/helpers": "workspace:^0.1.0",
 		"chroma-js": "2.4.2",
+		"fast-glob": "^3.2.11",
+		"fs-extra": "^10.0.0",
+		"listr2": "^4.0.2",
+		"postcss": "^8.4.6",
+		"postcss-import": "^14.0.2",
 		"tsup": "5.11.13",
 		"typescript": "4.5.5"
 	}
