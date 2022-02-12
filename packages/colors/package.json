@@ -76,7 +76,7 @@
 		"chroma-js": "2.4.2",
 		"fast-glob": "^3.2.11",
 		"fs-extra": "^10.0.0",
-		"listr2": "^4.0.2",
+		"listr2": "^4.0.4",
 		"postcss": "^8.4.6",
 		"postcss-import": "^14.0.2",
 		"tsup": "5.11.13",
