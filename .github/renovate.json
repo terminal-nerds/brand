@@ -13,8 +13,9 @@
 		{
 			"groupName": "Formatters & linters",
 			"labels": [
+				"⚙️ configuration:formatters|linters",
 				"⬆️ dependencies",
-				"⚙️ configuration:formatters|linters"
+				"🧰 monorepo"
 			],
 			"packagePatterns": [
 				"eslint",
@@ -26,7 +27,12 @@
 		},
 		{
 			"groupName": "Tools",
-			"labels": ["⬆️ dependencies", "⚙️ configurations:tools"],
+			"labels": [
+				"⚙️ configurations:tools",
+				"⬆️ dependencies",
+				"🧰 monorepo"
+			],
+
 			"packagePatterns": [
 				"changesets",
 				"@types/node",

@@ -10,6 +10,7 @@ importers:
       '@terminal-nerds/markdownlint-config': 0.3.0
       '@terminal-nerds/prettier-config': 0.1.2
       '@terminal-nerds/stylelint-config': 0.2.0
+      '@terminal-nerds/syncpack-config': ^0.1.0
       '@terminal-nerds/typescript-config': 0.1.0
       all-contributors-cli: 6.20.0
       eslint: 8.9.0
@@ -30,6 +31,7 @@ importers:
       '@terminal-nerds/markdownlint-config': 0.3.0_markdownlint-cli@0.31.1
       '@terminal-nerds/prettier-config': 0.1.2_prettier@2.5.1
       '@terminal-nerds/stylelint-config': 0.2.0_stylelint@14.5.0
+      '@terminal-nerds/syncpack-config': 0.1.0_syncpack@6.2.0
       '@terminal-nerds/typescript-config': 0.1.0_typescript@4.5.5
       all-contributors-cli: 6.20.0
       eslint: 8.9.0
@@ -576,6 +578,15 @@ packages:
       stylelint-scss: 4.1.0_stylelint@14.5.0
     transitivePeerDependencies:
       - postcss
+    dev: true
+
+  /@terminal-nerds/syncpack-config/0.1.0_syncpack@6.2.0:
+    resolution: {integrity: sha512-QEOevNM6Vfzts+ToRxEvboPBqr3PGxzLV00XTiJeXFvKJsTwdYW6JfHSfZWhwjdaE5DCQhjMPW7/cq/EX4XYAQ==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      syncpack: 6.2.0
+    dependencies:
+      syncpack: 6.2.0
     dev: true
 
   /@terminal-nerds/typescript-config/0.1.0_typescript@4.5.5:

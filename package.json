@@ -13,6 +13,13 @@
 	"volta": {
 		"node": "16.14.0"
 	},
+	"ultra": {
+		"concurrent": [
+			"clean:all",
+			"format:all",
+			"lint:all"
+		]
+	},
 	"scripts": {
 		"build": "ultra --recursive --build build",
 		"clean": "ultra --root --recursive clean:all",
@@ -20,7 +27,6 @@
 		"clean:cache": "rimraf \"./node_modules/.cache\" ; rimraf \"./.ultra.cache.json\"",
 		"contributors:add": "all-contributors add",
 		"contributors:generate": "all-contributors generate",
-		"dependencies:mismatches": "syncpack list-mismatches",
 		"dependencies:upgrade:all": "pnpm dependencies:upgrade:root ; pnpm dependencies:upgrade:helpers ; pnpm dependencies:upgrade:packages",
 		"dependencies:upgrade:root": "pnpm upgrade --interactive --latest",
 		"dependencies:upgrade:helpers": "pnpm upgrade --interactive --latest --filter ./helpers",
@@ -31,20 +37,14 @@
 		"format:prettier": "pretty-quick --branch main --pattern \"**/*\" --pattern \"!{helpers,packages}/**/*\" --verbose",
 		"format:syncpack": "syncpack format",
 		"lint": "ultra --root --recursive --concurrency 50 lint:all",
-		"lint:all": "pnpm lint:format ; pnpm lint:js ; pnpm lint:md",
+		"lint:all": "pnpm lint:format ; pnpm lint:js ; pnpm lint:md ; pnpm lint:packages",
 		"lint:format": "pretty-quick --branch main --pattern \"**/*\" --pattern \"!{helpers,packages}/**/*\" --verbose --check",
 		"lint:js": "DEBUG=\"eslint:cli-engine\" eslint . --ext .cjs,.json,.yml,.yaml --ignore \"./packages\" --cache --cache-location \"./node_modules/.cache/eslint\"",
 		"lint:md": "markdownlint . --dot --ignore-path \"./.gitignore\" --ignore \"./{helpers,packages}/**/*\" --ignore \"./.changeset/*.md\"",
+		"lint:packages": "syncpack list-mismatches",
 		"lint:staged": "lint-staged --verbose",
 		"prepare": "husky install",
 		"preinstall": "npx only-allow pnpm"
-	},
-	"ultra": {
-		"concurrent": [
-			"clean:all",
-			"format:all",
-			"lint:all"
-		]
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "0.4.2",
@@ -53,6 +53,7 @@
 		"@terminal-nerds/markdownlint-config": "0.3.0",
 		"@terminal-nerds/prettier-config": "0.1.2",
 		"@terminal-nerds/stylelint-config": "0.2.0",
+		"@terminal-nerds/syncpack-config": "^0.1.0",
 		"@terminal-nerds/typescript-config": "0.1.0",
 		"all-contributors-cli": "6.20.0",
 		"eslint": "8.9.0",
