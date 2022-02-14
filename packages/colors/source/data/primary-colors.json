@@ -1,0 +1,178 @@
+{
+	"black": {
+		"alpha": 1,
+		"chroma": 0,
+		"hue": null,
+		"lightness": 23.137,
+		"saturation": 0,
+		"hex": "#3B3B3B",
+		"red": 59,
+		"green": 59,
+		"blue": 59
+	},
+	"brightBlack": {
+		"alpha": 1,
+		"chroma": 0,
+		"hue": null,
+		"lightness": 29.412,
+		"saturation": 0,
+		"hex": "#4B4B4B",
+		"red": 75,
+		"green": 75,
+		"blue": 75
+	},
+	"blue": {
+		"alpha": 1,
+		"chroma": 62.494,
+		"hue": 205.992,
+		"lightness": 48.824,
+		"saturation": 99.197,
+		"hex": "#018DF8",
+		"red": 1,
+		"green": 141,
+		"blue": 248
+	},
+	"brightBlue": {
+		"alpha": 1,
+		"chroma": 48.696,
+		"hue": 216.596,
+		"lightness": 70.784,
+		"saturation": 94.631,
+		"hex": "#6EA5FB",
+		"red": 110,
+		"green": 165,
+		"blue": 251
+	},
+	"cyan": {
+		"alpha": 1,
+		"chroma": 34.266,
+		"hue": 180.764,
+		"lightness": 30.784,
+		"saturation": 100,
+		"hex": "#009B9D",
+		"red": 0,
+		"green": 155,
+		"blue": 157
+	},
+	"brightCyan": {
+		"alpha": 1,
+		"chroma": 26.51,
+		"hue": 180.706,
+		"lightness": 53.137,
+		"saturation": 35.565,
+		"hex": "#5DB1B2",
+		"red": 93,
+		"green": 177,
+		"blue": 178
+	},
+	"green": {
+		"alpha": 1,
+		"chroma": 62.664,
+		"hue": 95.78,
+		"lightness": 39.412,
+		"saturation": 54.229,
+		"hex": "#5A9B2E",
+		"red": 90,
+		"green": 155,
+		"blue": 46
+	},
+	"brightGreen": {
+		"alpha": 1,
+		"chroma": 49.42,
+		"hue": 94.588,
+		"lightness": 53.137,
+		"saturation": 35.565,
+		"hex": "#81B25D",
+		"red": 129,
+		"green": 178,
+		"blue": 93
+	},
+	"magenta": {
+		"alpha": 1,
+		"chroma": 62.607,
+		"hue": 273.962,
+		"lightness": 65.098,
+		"saturation": 59.551,
+		"hex": "#AD71DB",
+		"red": 173,
+		"green": 113,
+		"blue": 219
+	},
+	"brightMagenta": {
+		"alpha": 1,
+		"chroma": 48.5,
+		"hue": 274.699,
+		"lightness": 73.137,
+		"saturation": 60.584,
+		"hex": "#C191E4",
+		"red": 193,
+		"green": 145,
+		"blue": 228
+	},
+	"red": {
+		"alpha": 1,
+		"chroma": 62.949,
+		"hue": 4.8,
+		"lightness": 61.569,
+		"saturation": 76.531,
+		"hex": "#E85E52",
+		"red": 232,
+		"green": 94,
+		"blue": 82
+	},
+	"brightRed": {
+		"alpha": 1,
+		"chroma": 48.358,
+		"hue": 6.774,
+		"lightness": 70.98,
+		"saturation": 83.784,
+		"hex": "#F38577",
+		"red": 243,
+		"green": 133,
+		"blue": 119
+	},
+	"yellow": {
+		"alpha": 1,
+		"chroma": 62.782,
+		"hue": 43.605,
+		"lightness": 36.078,
+		"saturation": 93.478,
+		"hex": "#B28306",
+		"red": 178,
+		"green": 131,
+		"blue": 6
+	},
+	"brightYellow": {
+		"alpha": 1,
+		"chroma": 49.203,
+		"hue": 40,
+		"lightness": 53.725,
+		"saturation": 53.39,
+		"hex": "#C89E4A",
+		"red": 200,
+		"green": 158,
+		"blue": 74
+	},
+	"white": {
+		"alpha": 1,
+		"chroma": 0,
+		"hue": null,
+		"lightness": 98.039,
+		"saturation": 0,
+		"hex": "#FAFAFA",
+		"red": 250,
+		"green": 250,
+		"blue": 250
+	},
+	"brightWhite": {
+		"alpha": 1,
+		"chroma": 0,
+		"hue": null,
+		"lightness": 92.941,
+		"saturation": 0,
+		"hex": "#EDEDED",
+		"red": 237,
+		"green": 237,
+		"blue": 237
+	}
+}

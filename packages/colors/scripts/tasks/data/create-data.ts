@@ -1,11 +1,14 @@
 import { PRIMARY_COLORS, PRIMARY_COLOR_NAMES } from "$colors";
 import { COLORS_PALETTE, COLORS_PALETTE_NAMES } from "$palette/index";
 
+import { stringifyJSONWithTabs } from "@workspace/helpers/json";
+
 export function createColorsPaletteJSON() {
 	const data = [...COLORS_PALETTE_NAMES].map((name) => {
 		return [name, JSON.parse(COLORS_PALETTE[name].toJSON())];
 	});
-	return JSON.stringify(Object.fromEntries(data));
+
+	return stringifyJSONWithTabs(data);
 }
 
 export function createPrimaryColorsJSON() {
@@ -13,5 +16,5 @@ export function createPrimaryColorsJSON() {
 		return [name, JSON.parse(PRIMARY_COLORS[name].toJSON())];
 	});
 
-	return JSON.stringify(Object.fromEntries(data));
+	return stringifyJSONWithTabs(data);
 }

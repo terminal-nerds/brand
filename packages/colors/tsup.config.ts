@@ -5,7 +5,7 @@ import { defineConfig } from "tsup";
 export default defineConfig({
 	clean: true,
 	dts: true,
-	entry: ["source/**/*"],
+	entry: ["source/**/*.ts"],
 	format: ["esm"],
 	minify: true,
 	noExternal: ["@workspace/helpers"],

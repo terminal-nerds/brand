@@ -2,13 +2,18 @@ import path from "node:path";
 
 import { Listr } from "listr2";
 
+import { minifyJSONData } from "@workspace/helpers/json";
+
 import {
 	createColorsPaletteJSON,
 	createPrimaryColorsJSON,
-} from "./tasks/data/create-json-data";
-import { saveJSONDataToFile } from "./tasks/data/save-json-to-files";
+} from "./tasks/data/create-data";
+import { saveJSONDataToFile } from "./tasks/data/save-to-file";
 
-const OUTPUT_DIRECTORY = path.join(process.cwd(), "./dist/data");
+const OUTPUT_DIRECTORIES = {
+	dist: path.join(process.cwd(), "./dist/data"),
+	source: path.join(process.cwd(), "./source/data"),
+};
 
 interface Context {
 	colorsPaletteJSON: string;
@@ -35,21 +40,51 @@ const tasks = new Listr<Context>(
 				task.output = "Output:\n";
 
 				const colorsPaletteFilePath = path.join(
-					OUTPUT_DIRECTORY,
+					OUTPUT_DIRECTORIES.source,
 					"colors-palette.json",
 				);
 				const primaryColorsFilePath = path.join(
-					OUTPUT_DIRECTORY,
+					OUTPUT_DIRECTORIES.source,
 					"primary-colors.json",
 				);
 
 				saveJSONDataToFile(
-					context.colorsPaletteJSON,
+					appendNewLine(context.colorsPaletteJSON),
 					colorsPaletteFilePath,
 				);
 				task.output += `\n${colorsPaletteFilePath}\n`;
 				saveJSONDataToFile(
-					context.primaryColorsJSON,
+					appendNewLine(context.primaryColorsJSON),
+					primaryColorsFilePath,
+				);
+				task.output += `\n${primaryColorsFilePath}`;
+			},
+			options: {
+				bottomBar: false,
+				persistentOutput: true,
+			},
+		},
+		{
+			title: "Minify data outputs into distributable directory...",
+			task: async (context, task): Promise<void> => {
+				task.output = "Output:\n";
+
+				const colorsPaletteFilePath = path.join(
+					OUTPUT_DIRECTORIES.dist,
+					"colors-palette.json",
+				);
+				const primaryColorsFilePath = path.join(
+					OUTPUT_DIRECTORIES.dist,
+					"primary-colors.json",
+				);
+
+				saveJSONDataToFile(
+					minifyJSONData(context.colorsPaletteJSON),
+					colorsPaletteFilePath,
+				);
+				task.output += `\n${colorsPaletteFilePath}\n`;
+				saveJSONDataToFile(
+					minifyJSONData(context.primaryColorsJSON),
 					primaryColorsFilePath,
 				);
 				task.output += `\n${primaryColorsFilePath}`;
@@ -68,6 +103,10 @@ const tasks = new Listr<Context>(
 		},
 	},
 );
+
+function appendNewLine(output: string) {
+	return `${output}\n`;
+}
 
 try {
 	await tasks.run();
