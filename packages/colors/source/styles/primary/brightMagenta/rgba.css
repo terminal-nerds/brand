@@ -1,0 +1,9 @@
+:root {
+	--brightMagenta_red: 193;
+	--brightMagenta_green: 145;
+	--brightMagenta_blue: 228;
+	--brightMagenta_alpha: 1;
+	--brightMagenta_rgb: var(--brightMagenta_red) var(--brightMagenta_green) var(--brightMagenta_blue);
+	--brightMagenta_rgba: var(--brightMagenta_rgb) / var(--brightMagenta_alpha);
+	--brightMagenta: rgba(var(--brightMagenta_rgba));
+}

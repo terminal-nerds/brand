@@ -4,25 +4,47 @@ import { Listr } from "listr2";
 
 import type { ColorFunction } from "$helpers/color-settings";
 
-import { createColorCSSOutputs } from "./tasks/styles/create-css-content";
-import { saveCSSOutputToFile } from "./tasks/styles/save-css-to-files";
-import { wrapCSSOutputsInFile } from "./tasks/styles/wrap-css-outputs";
-import { resolveCSSImports } from "./tasks/styles/resolve-css-imports";
-import { minifyCSSOutputs } from "./tasks/styles/minify-css-outputs";
+import {
+	createColorsPaletteCSSContent,
+	createPrimaryColorsCSSContent,
+} from "./tasks/styles/create-content";
+import { saveOutputToFile } from "./tasks/shared/save-to-file";
+import {
+	createColorsPaletteImports,
+	createPrimaryColorsImports,
+} from "./tasks/styles/create-imports";
+import { processSourceCSS } from "./tasks/styles/process-source";
+import type { PaletteColorFunction } from "$palette/index";
 
-const OUTPUT_DIRECTORY = path.join(process.cwd(), "./dist/styles");
+const OUTPUT_DIRECTORIES = {
+	dist: {
+		colorsPalette: path.join(process.cwd(), "./dist/styles/palette"),
+		primaryColors: path.join(process.cwd(), "./dist/styles/primary"),
+	},
+	source: {
+		colorsPalette: path.join(process.cwd(), "./source/styles/palette"),
+		primaryColors: path.join(process.cwd(), "./source/styles/primary"),
+	},
+};
 
 interface Context {
-	colorsOutputs: Map<string, string>;
-	indexOutputs: Map<ColorFunction, string>;
+	colorsPalette: {
+		content: Map<PaletteColorFunction, string>;
+		imports: Map<ColorFunction, string>;
+	};
+	primaryColors: {
+		content: Map<string, string>;
+		imports: Map<string, string>;
+	};
 }
 
 const tasks = new Listr<Context>(
 	[
 		{
-			title: "Create CSS files with variables for every color and its function...",
+			title: "Create CSS files content for every primary color and color swatch in palette...",
 			task: async (context, task): Promise<void> => {
-				context.colorsOutputs = createColorCSSOutputs();
+				context.colorsPalette.content = createColorsPaletteCSSContent();
+				context.primaryColors.content = createPrimaryColorsCSSContent();
 				task.output = "Done!";
 			},
 			options: {
@@ -35,46 +57,29 @@ const tasks = new Listr<Context>(
 			task: async (context, task): Promise<void> => {
 				task.output = "Files:\n";
 
-				for (const [fileName, output] of context.colorsOutputs) {
+				for (const [fileName, output] of context.colorsPalette
+					.content) {
 					const [colorName, colorFunction] = fileName.split("-");
 					const filePath = path.join(
-						OUTPUT_DIRECTORY,
+						OUTPUT_DIRECTORIES.source.colorsPalette,
 						`${colorName}`,
 						`${colorFunction}.css`,
 					);
 
-					saveCSSOutputToFile(output, filePath);
+					saveOutputToFile(output, filePath);
 					task.output += `\n${filePath}`;
 				}
-			},
-			options: {
-				bottomBar: false,
-				persistentOutput: true,
-			},
-		},
-		{
-			title: "Wrap CSS color functions files into one index content...",
-			task: async (context, task): Promise<void> => {
-				context.indexOutputs = wrapCSSOutputsInFile();
-				task.output = "Done!";
-			},
-			options: {
-				bottomBar: false,
-				persistentOutput: true,
-			},
-		},
-		{
-			title: "Save wrapped CSS index content into files...",
-			task: async (context, task): Promise<void> => {
-				task.output = "Files:\n";
 
-				for (const [colorFunction, output] of context.indexOutputs) {
+				for (const [fileName, output] of context.primaryColors
+					.content) {
+					const [colorName, colorFunction] = fileName.split("-");
 					const filePath = path.join(
-						OUTPUT_DIRECTORY,
+						OUTPUT_DIRECTORIES.source.primaryColors,
+						`${colorName}`,
 						`${colorFunction}.css`,
 					);
 
-					saveCSSOutputToFile(output, filePath);
+					saveOutputToFile(output, filePath);
 					task.output += `\n${filePath}`;
 				}
 			},
@@ -84,10 +89,10 @@ const tasks = new Listr<Context>(
 			},
 		},
 		{
-			title: "Resolve CSS imports...",
-			task: async (_, task): Promise<void> => {
-				await resolveCSSImports(OUTPUT_DIRECTORY);
-
+			title: "Create CSS import files...",
+			task: async (context, task): Promise<void> => {
+				context.colorsPalette.imports = createColorsPaletteImports();
+				context.primaryColors.imports = createPrimaryColorsImports();
 				task.output = "Done!";
 			},
 			options: {
@@ -96,9 +101,48 @@ const tasks = new Listr<Context>(
 			},
 		},
 		{
-			title: "Minify CSS files...",
+			title: "Save imports CSS content into files...",
+			task: async (context, task): Promise<void> => {
+				task.output = "Files:\n";
+
+				for (const [colorFunction, output] of context.colorsPalette
+					.imports) {
+					const filePath = path.join(
+						OUTPUT_DIRECTORIES.source.colorsPalette,
+						`${colorFunction}.css`,
+					);
+
+					saveOutputToFile(output, filePath);
+					task.output += `\n${filePath}`;
+				}
+
+				for (const [colorFunction, output] of context.primaryColors
+					.imports) {
+					const filePath = path.join(
+						OUTPUT_DIRECTORIES.source.primaryColors,
+						`${colorFunction}.css`,
+					);
+
+					saveOutputToFile(output, filePath);
+					task.output += `\n${filePath}`;
+				}
+			},
+			options: {
+				bottomBar: false,
+				persistentOutput: true,
+			},
+		},
+		{
+			title: "Process CSS files into distributable directory...",
 			task: async (_, task): Promise<void> => {
-				minifyCSSOutputs(OUTPUT_DIRECTORY);
+				await processSourceCSS(
+					OUTPUT_DIRECTORIES.source.colorsPalette,
+					OUTPUT_DIRECTORIES.dist.colorsPalette,
+				);
+				await processSourceCSS(
+					OUTPUT_DIRECTORIES.source.primaryColors,
+					OUTPUT_DIRECTORIES.dist.primaryColors,
+				);
 
 				task.output = "Done!";
 			},
@@ -118,7 +162,16 @@ const tasks = new Listr<Context>(
 );
 
 try {
-	await tasks.run();
+	await tasks.run({
+		colorsPalette: {
+			content: new Map(),
+			imports: new Map(),
+		},
+		primaryColors: {
+			content: new Map(),
+			imports: new Map(),
+		},
+	});
 } catch (error) {
 	// eslint-disable-next-line no-console
 	console.error(error);

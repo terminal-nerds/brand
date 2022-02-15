@@ -1,0 +1,7 @@
+:root {
+	--blue_hue: 205.992deg;
+	--blue_saturation: 99.197%;
+	--blue_lightness: 48.824%;
+	--blue_hsl: var(--blue_hue) var(--blue_saturation) var(--blue_lightness);
+	--blue: hsl(var(--blue_hsl));
+}

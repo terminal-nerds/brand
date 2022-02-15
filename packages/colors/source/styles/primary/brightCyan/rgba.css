@@ -1,0 +1,9 @@
+:root {
+	--brightCyan_red: 93;
+	--brightCyan_green: 177;
+	--brightCyan_blue: 178;
+	--brightCyan_alpha: 1;
+	--brightCyan_rgb: var(--brightCyan_red) var(--brightCyan_green) var(--brightCyan_blue);
+	--brightCyan_rgba: var(--brightCyan_rgb) / var(--brightCyan_alpha);
+	--brightCyan: rgba(var(--brightCyan_rgba));
+}

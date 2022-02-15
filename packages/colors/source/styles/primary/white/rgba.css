@@ -1,0 +1,9 @@
+:root {
+	--white_red: 250;
+	--white_green: 250;
+	--white_blue: 250;
+	--white_alpha: 1;
+	--white_rgb: var(--white_red) var(--white_green) var(--white_blue);
+	--white_rgba: var(--white_rgb) / var(--white_alpha);
+	--white: rgba(var(--white_rgba));
+}

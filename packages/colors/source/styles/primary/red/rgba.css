@@ -1,0 +1,9 @@
+:root {
+	--red_red: 232;
+	--red_green: 94;
+	--red_blue: 82;
+	--red_alpha: 1;
+	--red_rgb: var(--red_red) var(--red_green) var(--red_blue);
+	--red_rgba: var(--red_rgb) / var(--red_alpha);
+	--red: rgba(var(--red_rgba));
+}

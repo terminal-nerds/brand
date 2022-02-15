@@ -1,0 +1,9 @@
+:root {
+	--black_red: 59;
+	--black_green: 59;
+	--black_blue: 59;
+	--black_alpha: 1;
+	--black_rgb: var(--black_red) var(--black_green) var(--black_blue);
+	--black_rgba: var(--black_rgb) / var(--black_alpha);
+	--black: rgba(var(--black_rgba));
+}

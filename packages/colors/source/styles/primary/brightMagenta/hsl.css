@@ -1,0 +1,7 @@
+:root {
+	--brightMagenta_hue: 274.699deg;
+	--brightMagenta_saturation: 60.584%;
+	--brightMagenta_lightness: 73.137%;
+	--brightMagenta_hsl: var(--brightMagenta_hue) var(--brightMagenta_saturation) var(--brightMagenta_lightness);
+	--brightMagenta: hsl(var(--brightMagenta_hsl));
+}

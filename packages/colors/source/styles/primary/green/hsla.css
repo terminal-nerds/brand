@@ -1,0 +1,9 @@
+:root {
+	--green_hue: 95.78deg;
+	--green_saturation: 54.229%;
+	--green_lightness: 39.412%;
+	--green_alpha: 1;
+	--green_hsl: var(--green_hue) var(--green_saturation) var(--green_lightness);
+	--green_hsla: var(--green_hsl) / var(--green_alpha);
+	--green: hsla(var(--green_hsla));
+}

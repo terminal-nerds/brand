@@ -1,3 +1,6 @@
+import type { ColorFunction } from "$helpers/color-settings";
+import type { ColorSwatch } from "$utils/ColorPalette";
+
 import blue from "./blue";
 import cyan from "./cyan";
 import gray from "./gray";
@@ -17,6 +20,8 @@ export const COLORS_PALETTE = {
 } as const;
 
 export type ColorPaletteName = keyof typeof COLORS_PALETTE;
+export type PaletteColorSwatch = `${ColorPaletteName}-${ColorSwatch}`;
+export type PaletteColorFunction = `${ColorPaletteName}-${ColorFunction}`;
 
 export const COLORS_PALETTE_NAMES = new Set<ColorPaletteName>(
 	Object.keys(COLORS_PALETTE) as Array<ColorPaletteName>,

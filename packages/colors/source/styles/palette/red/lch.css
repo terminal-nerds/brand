@@ -1,0 +1,79 @@
+:root {
+	--red-50_lightness: 98.431%;
+	--red-50_chroma: 2.342%;
+	--red-50_hue: 15deg;
+	--red-50_lch: var(--red-50_lightness) var(--red-50_chroma) var(--red-50_hue);
+	--red-50: lch(var(--red-50_lch));
+}
+
+:root {
+	--red-100_lightness: 94.902%;
+	--red-100_chroma: 8.251%;
+	--red-100_hue: 9.231deg;
+	--red-100_lch: var(--red-100_lightness) var(--red-100_chroma) var(--red-100_hue);
+	--red-100: lch(var(--red-100_lch));
+}
+
+:root {
+	--red-200_lightness: 87.255%;
+	--red-200_chroma: 22.251%;
+	--red-200_hue: 8.308deg;
+	--red-200_lch: var(--red-200_lightness) var(--red-200_chroma) var(--red-200_hue);
+	--red-200: lch(var(--red-200_lch));
+}
+
+:root {
+	--red-300_lightness: 79.412%;
+	--red-300_chroma: 35.567%;
+	--red-300_hue: 7.423deg;
+	--red-300_lch: var(--red-300_lightness) var(--red-300_chroma) var(--red-300_hue);
+	--red-300: lch(var(--red-300_lch));
+}
+
+:root {
+	--red-400_lightness: 70.98%;
+	--red-400_chroma: 48.358%;
+	--red-400_hue: 6.774deg;
+	--red-400_lch: var(--red-400_lightness) var(--red-400_chroma) var(--red-400_hue);
+	--red-400: lch(var(--red-400_lch));
+}
+
+:root {
+	--red-500_lightness: 61.569%;
+	--red-500_chroma: 62.949%;
+	--red-500_hue: 4.8deg;
+	--red-500_lch: var(--red-500_lightness) var(--red-500_chroma) var(--red-500_hue);
+	--red-500: lch(var(--red-500_lch));
+}
+
+:root {
+	--red-600_lightness: 50.392%;
+	--red-600_chroma: 52.205%;
+	--red-600_hue: 5.455deg;
+	--red-600_lch: var(--red-600_lightness) var(--red-600_chroma) var(--red-600_hue);
+	--red-600: lch(var(--red-600_lch));
+}
+
+:root {
+	--red-700_lightness: 41.961%;
+	--red-700_chroma: 43.524%;
+	--red-700_hue: 5.51deg;
+	--red-700_lch: var(--red-700_lightness) var(--red-700_chroma) var(--red-700_hue);
+	--red-700: lch(var(--red-700_lch));
+}
+
+:root {
+	--red-800_lightness: 33.137%;
+	--red-800_chroma: 34.517%;
+	--red-800_hue: 5.6deg;
+	--red-800_lch: var(--red-800_lightness) var(--red-800_chroma) var(--red-800_hue);
+	--red-800: lch(var(--red-800_lch));
+}
+
+:root {
+	--red-900_lightness: 26.078%;
+	--red-900_chroma: 26.931%;
+	--red-900_hue: 6.316deg;
+	--red-900_lch: var(--red-900_lightness) var(--red-900_chroma) var(--red-900_hue);
+	--red-900: lch(var(--red-900_lch));
+}

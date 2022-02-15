@@ -1,0 +1,99 @@
+:root {
+	--cyan-50_red: 246;
+	--cyan-50_green: 251;
+	--cyan-50_blue: 251;
+	--cyan-50_alpha: 1;
+	--cyan-50_rgb: var(--cyan-50_red) var(--cyan-50_green) var(--cyan-50_blue);
+	--cyan-50_rgba: var(--cyan-50_rgb) / var(--cyan-50_alpha);
+	--cyan-50: rgba(var(--cyan-50_rgba));
+}
+
+:root {
+	--cyan-100_red: 226;
+	--cyan-100_green: 240;
+	--cyan-100_blue: 240;
+	--cyan-100_alpha: 1;
+	--cyan-100_rgb: var(--cyan-100_red) var(--cyan-100_green) var(--cyan-100_blue);
+	--cyan-100_rgba: var(--cyan-100_rgb) / var(--cyan-100_alpha);
+	--cyan-100: rgba(var(--cyan-100_rgba));
+}
+
+:root {
+	--cyan-200_red: 184;
+	--cyan-200_green: 219;
+	--cyan-200_blue: 219;
+	--cyan-200_alpha: 1;
+	--cyan-200_rgb: var(--cyan-200_red) var(--cyan-200_green) var(--cyan-200_blue);
+	--cyan-200_rgba: var(--cyan-200_rgb) / var(--cyan-200_alpha);
+	--cyan-200: rgba(var(--cyan-200_rgba));
+}
+
+:root {
+	--cyan-300_red: 141;
+	--cyan-300_green: 198;
+	--cyan-300_blue: 198;
+	--cyan-300_alpha: 1;
+	--cyan-300_rgb: var(--cyan-300_red) var(--cyan-300_green) var(--cyan-300_blue);
+	--cyan-300_rgba: var(--cyan-300_rgb) / var(--cyan-300_alpha);
+	--cyan-300: rgba(var(--cyan-300_rgba));
+}
+
+:root {
+	--cyan-400_red: 93;
+	--cyan-400_green: 177;
+	--cyan-400_blue: 178;
+	--cyan-400_alpha: 1;
+	--cyan-400_rgb: var(--cyan-400_red) var(--cyan-400_green) var(--cyan-400_blue);
+	--cyan-400_rgba: var(--cyan-400_rgb) / var(--cyan-400_alpha);
+	--cyan-400: rgba(var(--cyan-400_rgba));
+}
+
+:root {
+	--cyan-500_red: 0;
+	--cyan-500_green: 155;
+	--cyan-500_blue: 157;
+	--cyan-500_alpha: 1;
+	--cyan-500_rgb: var(--cyan-500_red) var(--cyan-500_green) var(--cyan-500_blue);
+	--cyan-500_rgba: var(--cyan-500_rgb) / var(--cyan-500_alpha);
+	--cyan-500: rgba(var(--cyan-500_rgba));
+}
+
+:root {
+	--cyan-600_red: 19;
+	--cyan-600_green: 127;
+	--cyan-600_blue: 128;
+	--cyan-600_alpha: 1;
+	--cyan-600_rgb: var(--cyan-600_red) var(--cyan-600_green) var(--cyan-600_blue);
+	--cyan-600_rgba: var(--cyan-600_rgb) / var(--cyan-600_alpha);
+	--cyan-600: rgba(var(--cyan-600_rgba));
+}
+
+:root {
+	--cyan-700_red: 24;
+	--cyan-700_green: 105;
+	--cyan-700_blue: 106;
+	--cyan-700_alpha: 1;
+	--cyan-700_rgb: var(--cyan-700_red) var(--cyan-700_green) var(--cyan-700_blue);
+	--cyan-700_rgba: var(--cyan-700_rgb) / var(--cyan-700_alpha);
+	--cyan-700: rgba(var(--cyan-700_rgba));
+}
+
+:root {
+	--cyan-800_red: 25;
+	--cyan-800_green: 83;
+	--cyan-800_blue: 84;
+	--cyan-800_alpha: 1;
+	--cyan-800_rgb: var(--cyan-800_red) var(--cyan-800_green) var(--cyan-800_blue);
+	--cyan-800_rgba: var(--cyan-800_rgb) / var(--cyan-800_alpha);
+	--cyan-800: rgba(var(--cyan-800_rgba));
+}
+
+:root {
+	--cyan-900_red: 24;
+	--cyan-900_green: 65;
+	--cyan-900_blue: 66;
+	--cyan-900_alpha: 1;
+	--cyan-900_rgb: var(--cyan-900_red) var(--cyan-900_green) var(--cyan-900_blue);
+	--cyan-900_rgba: var(--cyan-900_rgb) / var(--cyan-900_alpha);
+	--cyan-900: rgba(var(--cyan-900_rgba));
+}

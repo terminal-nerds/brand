@@ -1,0 +1,99 @@
+:root {
+	--gray-50_lightness: 98.039%;
+	--gray-50_chroma: 0%;
+	--gray-50_hue: NaNdeg;
+	--gray-50_alpha: 1;
+	--gray-50_lch: var(--gray-50_lightness) var(--gray-50_chroma) var(--gray-50_hue);
+	--gray-50_lcha: var(--gray-50_lch) / var(--gray-50_alpha);
+	--gray-50: lcha(var(--gray-50_lcha));
+}
+
+:root {
+	--gray-100_lightness: 92.941%;
+	--gray-100_chroma: 0%;
+	--gray-100_hue: NaNdeg;
+	--gray-100_alpha: 1;
+	--gray-100_lch: var(--gray-100_lightness) var(--gray-100_chroma) var(--gray-100_hue);
+	--gray-100_lcha: var(--gray-100_lch) / var(--gray-100_alpha);
+	--gray-100: lcha(var(--gray-100_lcha));
+}
+
+:root {
+	--gray-200_lightness: 83.137%;
+	--gray-200_chroma: 0%;
+	--gray-200_hue: NaNdeg;
+	--gray-200_alpha: 1;
+	--gray-200_lch: var(--gray-200_lightness) var(--gray-200_chroma) var(--gray-200_hue);
+	--gray-200_lcha: var(--gray-200_lch) / var(--gray-200_alpha);
+	--gray-200: lcha(var(--gray-200_lcha));
+}
+
+:root {
+	--gray-300_lightness: 73.725%;
+	--gray-300_chroma: 0%;
+	--gray-300_hue: NaNdeg;
+	--gray-300_alpha: 1;
+	--gray-300_lch: var(--gray-300_lightness) var(--gray-300_chroma) var(--gray-300_hue);
+	--gray-300_lcha: var(--gray-300_lch) / var(--gray-300_alpha);
+	--gray-300: lcha(var(--gray-300_lcha));
+}
+
+:root {
+	--gray-400_lightness: 64.314%;
+	--gray-400_chroma: 0%;
+	--gray-400_hue: NaNdeg;
+	--gray-400_alpha: 1;
+	--gray-400_lch: var(--gray-400_lightness) var(--gray-400_chroma) var(--gray-400_hue);
+	--gray-400_lcha: var(--gray-400_lch) / var(--gray-400_alpha);
+	--gray-400: lcha(var(--gray-400_lcha));
+}
+
+:root {
+	--gray-500_lightness: 54.51%;
+	--gray-500_chroma: 0%;
+	--gray-500_hue: NaNdeg;
+	--gray-500_alpha: 1;
+	--gray-500_lch: var(--gray-500_lightness) var(--gray-500_chroma) var(--gray-500_hue);
+	--gray-500_lcha: var(--gray-500_lch) / var(--gray-500_alpha);
+	--gray-500: lcha(var(--gray-500_lcha));
+}
+
+:root {
+	--gray-600_lightness: 44.706%;
+	--gray-600_chroma: 0%;
+	--gray-600_hue: NaNdeg;
+	--gray-600_alpha: 1;
+	--gray-600_lch: var(--gray-600_lightness) var(--gray-600_chroma) var(--gray-600_hue);
+	--gray-600_lcha: var(--gray-600_lch) / var(--gray-600_alpha);
+	--gray-600: lcha(var(--gray-600_lcha));
+}
+
+:root {
+	--gray-700_lightness: 37.255%;
+	--gray-700_chroma: 0%;
+	--gray-700_hue: NaNdeg;
+	--gray-700_alpha: 1;
+	--gray-700_lch: var(--gray-700_lightness) var(--gray-700_chroma) var(--gray-700_hue);
+	--gray-700_lcha: var(--gray-700_lch) / var(--gray-700_alpha);
+	--gray-700: lcha(var(--gray-700_lcha));
+}
+
+:root {
+	--gray-800_lightness: 29.412%;
+	--gray-800_chroma: 0%;
+	--gray-800_hue: NaNdeg;
+	--gray-800_alpha: 1;
+	--gray-800_lch: var(--gray-800_lightness) var(--gray-800_chroma) var(--gray-800_hue);
+	--gray-800_lcha: var(--gray-800_lch) / var(--gray-800_alpha);
+	--gray-800: lcha(var(--gray-800_lcha));
+}
+
+:root {
+	--gray-900_lightness: 23.137%;
+	--gray-900_chroma: 0%;
+	--gray-900_hue: NaNdeg;
+	--gray-900_alpha: 1;
+	--gray-900_lch: var(--gray-900_lightness) var(--gray-900_chroma) var(--gray-900_hue);
+	--gray-900_lcha: var(--gray-900_lch) / var(--gray-900_alpha);
+	--gray-900: lcha(var(--gray-900_lcha));
+}

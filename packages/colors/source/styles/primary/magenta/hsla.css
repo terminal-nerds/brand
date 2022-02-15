@@ -1,0 +1,9 @@
+:root {
+	--magenta_hue: 273.962deg;
+	--magenta_saturation: 59.551%;
+	--magenta_lightness: 65.098%;
+	--magenta_alpha: 1;
+	--magenta_hsl: var(--magenta_hue) var(--magenta_saturation) var(--magenta_lightness);
+	--magenta_hsla: var(--magenta_hsl) / var(--magenta_alpha);
+	--magenta: hsla(var(--magenta_hsla));
+}

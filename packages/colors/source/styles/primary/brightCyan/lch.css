@@ -1,0 +1,7 @@
+:root {
+	--brightCyan_lightness: 53.137%;
+	--brightCyan_chroma: 26.51%;
+	--brightCyan_hue: 180.706deg;
+	--brightCyan_lch: var(--brightCyan_lightness) var(--brightCyan_chroma) var(--brightCyan_hue);
+	--brightCyan: lch(var(--brightCyan_lch));
+}

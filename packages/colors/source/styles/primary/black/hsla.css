@@ -1,0 +1,9 @@
+:root {
+	--black_hue: NaNdeg;
+	--black_saturation: 0%;
+	--black_lightness: 23.137%;
+	--black_alpha: 1;
+	--black_hsl: var(--black_hue) var(--black_saturation) var(--black_lightness);
+	--black_hsla: var(--black_hsl) / var(--black_alpha);
+	--black: hsla(var(--black_hsla));
+}

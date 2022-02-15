@@ -1,3 +1,4 @@
+import type { ColorFunction } from "$helpers/color-settings";
 import Blue from "$palette/blue";
 import Cyan from "$palette/cyan";
 import Gray from "$palette/gray";
@@ -35,6 +36,7 @@ export const PRIMARY_COLORS = {
 /* eslint-enable @typescript-eslint/no-non-null-assertion */
 
 export type PrimaryColorName = keyof typeof PRIMARY_COLORS;
+export type PrimaryColorFunction = `${PrimaryColorName}-${ColorFunction}`;
 
 export const PRIMARY_COLOR_NAMES = new Set<PrimaryColorName>(
 	Object.keys(PRIMARY_COLORS) as Array<PrimaryColorName>,

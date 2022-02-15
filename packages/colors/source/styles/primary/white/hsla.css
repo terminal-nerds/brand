@@ -1,0 +1,9 @@
+:root {
+	--white_hue: NaNdeg;
+	--white_saturation: 0%;
+	--white_lightness: 98.039%;
+	--white_alpha: 1;
+	--white_hsl: var(--white_hue) var(--white_saturation) var(--white_lightness);
+	--white_hsla: var(--white_hsl) / var(--white_alpha);
+	--white: hsla(var(--white_hsla));
+}

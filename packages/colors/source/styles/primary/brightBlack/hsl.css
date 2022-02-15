@@ -1,0 +1,7 @@
+:root {
+	--brightBlack_hue: NaNdeg;
+	--brightBlack_saturation: 0%;
+	--brightBlack_lightness: 29.412%;
+	--brightBlack_hsl: var(--brightBlack_hue) var(--brightBlack_saturation) var(--brightBlack_lightness);
+	--brightBlack: hsl(var(--brightBlack_hsl));
+}

@@ -8,7 +8,7 @@ import {
 	createColorsPaletteJSON,
 	createPrimaryColorsJSON,
 } from "./tasks/data/create-data";
-import { saveJSONDataToFile } from "./tasks/data/save-to-file";
+import { saveOutputToFile } from "./tasks/shared/save-to-file";
 
 const OUTPUT_DIRECTORIES = {
 	dist: path.join(process.cwd(), "./dist/data"),
@@ -48,13 +48,13 @@ const tasks = new Listr<Context>(
 					"primary-colors.json",
 				);
 
-				saveJSONDataToFile(
-					appendNewLine(context.colorsPaletteJSON),
+				saveOutputToFile(
+					context.colorsPaletteJSON,
 					colorsPaletteFilePath,
 				);
 				task.output += `\n${colorsPaletteFilePath}\n`;
-				saveJSONDataToFile(
-					appendNewLine(context.primaryColorsJSON),
+				saveOutputToFile(
+					context.primaryColorsJSON,
 					primaryColorsFilePath,
 				);
 				task.output += `\n${primaryColorsFilePath}`;
@@ -78,12 +78,13 @@ const tasks = new Listr<Context>(
 					"primary-colors.json",
 				);
 
-				saveJSONDataToFile(
+				saveOutputToFile(
 					minifyJSONData(context.colorsPaletteJSON),
 					colorsPaletteFilePath,
 				);
 				task.output += `\n${colorsPaletteFilePath}\n`;
-				saveJSONDataToFile(
+
+				saveOutputToFile(
 					minifyJSONData(context.primaryColorsJSON),
 					primaryColorsFilePath,
 				);
@@ -103,10 +104,6 @@ const tasks = new Listr<Context>(
 		},
 	},
 );
-
-function appendNewLine(output: string) {
-	return `${output}\n`;
-}
 
 try {
 	await tasks.run();

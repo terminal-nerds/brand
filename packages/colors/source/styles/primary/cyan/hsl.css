@@ -1,0 +1,7 @@
+:root {
+	--cyan_hue: 180.764deg;
+	--cyan_saturation: 100%;
+	--cyan_lightness: 30.784%;
+	--cyan_hsl: var(--cyan_hue) var(--cyan_saturation) var(--cyan_lightness);
+	--cyan: hsl(var(--cyan_hsl));
+}

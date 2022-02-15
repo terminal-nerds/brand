@@ -1,0 +1,7 @@
+:root {
+	--cyan_red: 0;
+	--cyan_green: 155;
+	--cyan_blue: 157;
+	--cyan_rgb: var(--cyan_red) var(--cyan_green) var(--cyan_blue);
+	--cyan: rgb(var(--cyan_rgb));
+}

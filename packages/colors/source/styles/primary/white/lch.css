@@ -1,0 +1,7 @@
+:root {
+	--white_lightness: 98.039%;
+	--white_chroma: 0%;
+	--white_hue: NaNdeg;
+	--white_lch: var(--white_lightness) var(--white_chroma) var(--white_hue);
+	--white: lch(var(--white_lch));
+}

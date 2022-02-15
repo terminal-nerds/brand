@@ -1,0 +1,79 @@
+:root {
+	--cyan-50_lightness: 97.451%;
+	--cyan-50_chroma: 1.742%;
+	--cyan-50_hue: 180deg;
+	--cyan-50_lch: var(--cyan-50_lightness) var(--cyan-50_chroma) var(--cyan-50_hue);
+	--cyan-50: lch(var(--cyan-50_lch));
+}
+
+:root {
+	--cyan-100_lightness: 91.373%;
+	--cyan-100_chroma: 4.876%;
+	--cyan-100_hue: 180deg;
+	--cyan-100_lch: var(--cyan-100_lightness) var(--cyan-100_chroma) var(--cyan-100_hue);
+	--cyan-100: lch(var(--cyan-100_lch));
+}
+
+:root {
+	--cyan-200_lightness: 79.02%;
+	--cyan-200_chroma: 12.074%;
+	--cyan-200_hue: 180deg;
+	--cyan-200_lch: var(--cyan-200_lightness) var(--cyan-200_chroma) var(--cyan-200_hue);
+	--cyan-200: lch(var(--cyan-200_lch));
+}
+
+:root {
+	--cyan-300_lightness: 66.471%;
+	--cyan-300_chroma: 19.2%;
+	--cyan-300_hue: 180deg;
+	--cyan-300_lch: var(--cyan-300_lightness) var(--cyan-300_chroma) var(--cyan-300_hue);
+	--cyan-300: lch(var(--cyan-300_lch));
+}
+
+:root {
+	--cyan-400_lightness: 53.137%;
+	--cyan-400_chroma: 26.51%;
+	--cyan-400_hue: 180.706deg;
+	--cyan-400_lch: var(--cyan-400_lightness) var(--cyan-400_chroma) var(--cyan-400_hue);
+	--cyan-400: lch(var(--cyan-400_lch));
+}
+
+:root {
+	--cyan-500_lightness: 30.784%;
+	--cyan-500_chroma: 34.266%;
+	--cyan-500_hue: 180.764deg;
+	--cyan-500_lch: var(--cyan-500_lightness) var(--cyan-500_chroma) var(--cyan-500_hue);
+	--cyan-500: lch(var(--cyan-500_lch));
+}
+
+:root {
+	--cyan-600_lightness: 28.824%;
+	--cyan-600_chroma: 28.556%;
+	--cyan-600_hue: 180.55deg;
+	--cyan-600_lch: var(--cyan-600_lightness) var(--cyan-600_chroma) var(--cyan-600_hue);
+	--cyan-600: lch(var(--cyan-600_lch));
+}
+
+:root {
+	--cyan-700_lightness: 25.49%;
+	--cyan-700_chroma: 23.79%;
+	--cyan-700_hue: 180.732deg;
+	--cyan-700_lch: var(--cyan-700_lightness) var(--cyan-700_chroma) var(--cyan-700_hue);
+	--cyan-700: lch(var(--cyan-700_lch));
+}
+
+:root {
+	--cyan-800_lightness: 21.373%;
+	--cyan-800_chroma: 18.878%;
+	--cyan-800_hue: 181.017deg;
+	--cyan-800_lch: var(--cyan-800_lightness) var(--cyan-800_chroma) var(--cyan-800_hue);
+	--cyan-800: lch(var(--cyan-800_lch));
+}
+
+:root {
+	--cyan-900_lightness: 17.647%;
+	--cyan-900_chroma: 14.652%;
+	--cyan-900_hue: 181.429deg;
+	--cyan-900_lch: var(--cyan-900_lightness) var(--cyan-900_chroma) var(--cyan-900_hue);
+	--cyan-900: lch(var(--cyan-900_lch));
+}

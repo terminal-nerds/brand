@@ -1,0 +1,7 @@
+:root {
+	--red_hue: 4.8deg;
+	--red_saturation: 76.531%;
+	--red_lightness: 61.569%;
+	--red_hsl: var(--red_hue) var(--red_saturation) var(--red_lightness);
+	--red: hsl(var(--red_hsl));
+}

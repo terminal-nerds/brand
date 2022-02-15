@@ -1,0 +1,9 @@
+:root {
+	--yellow_lightness: 36.078%;
+	--yellow_chroma: 62.782%;
+	--yellow_hue: 43.605deg;
+	--yellow_alpha: 1;
+	--yellow_lch: var(--yellow_lightness) var(--yellow_chroma) var(--yellow_hue);
+	--yellow_lcha: var(--yellow_lch) / var(--yellow_alpha);
+	--yellow: lcha(var(--yellow_lcha));
+}

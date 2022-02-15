@@ -1,0 +1,9 @@
+:root {
+	--blue_lightness: 48.824%;
+	--blue_chroma: 62.494%;
+	--blue_hue: 205.992deg;
+	--blue_alpha: 1;
+	--blue_lch: var(--blue_lightness) var(--blue_chroma) var(--blue_hue);
+	--blue_lcha: var(--blue_lch) / var(--blue_alpha);
+	--blue: lcha(var(--blue_lcha));
+}

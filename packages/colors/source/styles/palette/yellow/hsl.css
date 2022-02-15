@@ -1,0 +1,79 @@
+:root {
+	--yellow-50_hue: 30deg;
+	--yellow-50_saturation: 66.667%;
+	--yellow-50_lightness: 97.647%;
+	--yellow-50_hsl: var(--yellow-50_hue) var(--yellow-50_saturation) var(--yellow-50_lightness);
+	--yellow-50: hsl(var(--yellow-50_hsl));
+}
+
+:root {
+	--yellow-100_hue: 34.286deg;
+	--yellow-100_saturation: 66.667%;
+	--yellow-100_lightness: 91.765%;
+	--yellow-100_hsl: var(--yellow-100_hue) var(--yellow-100_saturation) var(--yellow-100_lightness);
+	--yellow-100: hsl(var(--yellow-100_hsl));
+}
+
+:root {
+	--yellow-200_hue: 36.563deg;
+	--yellow-200_saturation: 60.377%;
+	--yellow-200_lightness: 79.216%;
+	--yellow-200_hsl: var(--yellow-200_hue) var(--yellow-200_saturation) var(--yellow-200_lightness);
+	--yellow-200: hsl(var(--yellow-200_hsl));
+}
+
+:root {
+	--yellow-300_hue: 37.732deg;
+	--yellow-300_saturation: 57.396%;
+	--yellow-300_lightness: 66.863%;
+	--yellow-300_hsl: var(--yellow-300_hue) var(--yellow-300_saturation) var(--yellow-300_lightness);
+	--yellow-300: hsl(var(--yellow-300_hsl));
+}
+
+:root {
+	--yellow-400_hue: 40deg;
+	--yellow-400_saturation: 53.39%;
+	--yellow-400_lightness: 53.725%;
+	--yellow-400_hsl: var(--yellow-400_hue) var(--yellow-400_saturation) var(--yellow-400_lightness);
+	--yellow-400: hsl(var(--yellow-400_hsl));
+}
+
+:root {
+	--yellow-500_hue: 43.605deg;
+	--yellow-500_saturation: 93.478%;
+	--yellow-500_lightness: 36.078%;
+	--yellow-500_hsl: var(--yellow-500_hue) var(--yellow-500_saturation) var(--yellow-500_lightness);
+	--yellow-500: hsl(var(--yellow-500_hsl));
+}
+
+:root {
+	--yellow-600_hue: 42.727deg;
+	--yellow-600_saturation: 82.5%;
+	--yellow-600_lightness: 31.373%;
+	--yellow-600_hsl: var(--yellow-600_hue) var(--yellow-600_saturation) var(--yellow-600_lightness);
+	--yellow-600: hsl(var(--yellow-600_hsl));
+}
+
+:root {
+	--yellow-700_hue: 42.115deg;
+	--yellow-700_saturation: 75.362%;
+	--yellow-700_lightness: 27.059%;
+	--yellow-700_hsl: var(--yellow-700_hue) var(--yellow-700_saturation) var(--yellow-700_lightness);
+	--yellow-700: hsl(var(--yellow-700_hsl));
+}
+
+:root {
+	--yellow-800_hue: 41.299deg;
+	--yellow-800_saturation: 68.142%;
+	--yellow-800_lightness: 22.157%;
+	--yellow-800_hsl: var(--yellow-800_hue) var(--yellow-800_saturation) var(--yellow-800_lightness);
+	--yellow-800: hsl(var(--yellow-800_hsl));
+}
+
+:root {
+	--yellow-900_hue: 40.345deg;
+	--yellow-900_saturation: 63.043%;
+	--yellow-900_lightness: 18.039%;
+	--yellow-900_hsl: var(--yellow-900_hue) var(--yellow-900_saturation) var(--yellow-900_lightness);
+	--yellow-900: hsl(var(--yellow-900_hsl));
+}

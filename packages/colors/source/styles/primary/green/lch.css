@@ -1,0 +1,7 @@
+:root {
+	--green_lightness: 39.412%;
+	--green_chroma: 62.664%;
+	--green_hue: 95.78deg;
+	--green_lch: var(--green_lightness) var(--green_chroma) var(--green_hue);
+	--green: lch(var(--green_lch));
+}

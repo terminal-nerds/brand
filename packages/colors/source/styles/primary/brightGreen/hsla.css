@@ -1,0 +1,9 @@
+:root {
+	--brightGreen_hue: 94.588deg;
+	--brightGreen_saturation: 35.565%;
+	--brightGreen_lightness: 53.137%;
+	--brightGreen_alpha: 1;
+	--brightGreen_hsl: var(--brightGreen_hue) var(--brightGreen_saturation) var(--brightGreen_lightness);
+	--brightGreen_hsla: var(--brightGreen_hsl) / var(--brightGreen_alpha);
+	--brightGreen: hsla(var(--brightGreen_hsla));
+}
