@@ -5,7 +5,7 @@
 	--green-50_alpha: 1;
 	--green-50_lch: var(--green-50_lightness) var(--green-50_chroma) var(--green-50_hue);
 	--green-50_lcha: var(--green-50_lch) / var(--green-50_alpha);
-	--green-50: lcha(var(--green-50_lcha));
+	--green-50: lch(var(--green-50_lch));
 }
 
 :root {
@@ -15,7 +15,7 @@
 	--green-100_alpha: 1;
 	--green-100_lch: var(--green-100_lightness) var(--green-100_chroma) var(--green-100_hue);
 	--green-100_lcha: var(--green-100_lch) / var(--green-100_alpha);
-	--green-100: lcha(var(--green-100_lcha));
+	--green-100: lch(var(--green-100_lch));
 }
 
 :root {
@@ -25,7 +25,7 @@
 	--green-200_alpha: 1;
 	--green-200_lch: var(--green-200_lightness) var(--green-200_chroma) var(--green-200_hue);
 	--green-200_lcha: var(--green-200_lch) / var(--green-200_alpha);
-	--green-200: lcha(var(--green-200_lcha));
+	--green-200: lch(var(--green-200_lch));
 }
 
 :root {
@@ -35,7 +35,7 @@
 	--green-300_alpha: 1;
 	--green-300_lch: var(--green-300_lightness) var(--green-300_chroma) var(--green-300_hue);
 	--green-300_lcha: var(--green-300_lch) / var(--green-300_alpha);
-	--green-300: lcha(var(--green-300_lcha));
+	--green-300: lch(var(--green-300_lch));
 }
 
 :root {
@@ -45,7 +45,7 @@
 	--green-400_alpha: 1;
 	--green-400_lch: var(--green-400_lightness) var(--green-400_chroma) var(--green-400_hue);
 	--green-400_lcha: var(--green-400_lch) / var(--green-400_alpha);
-	--green-400: lcha(var(--green-400_lcha));
+	--green-400: lch(var(--green-400_lch));
 }
 
 :root {
@@ -55,7 +55,7 @@
 	--green-500_alpha: 1;
 	--green-500_lch: var(--green-500_lightness) var(--green-500_chroma) var(--green-500_hue);
 	--green-500_lcha: var(--green-500_lch) / var(--green-500_alpha);
-	--green-500: lcha(var(--green-500_lcha));
+	--green-500: lch(var(--green-500_lch));
 }
 
 :root {
@@ -65,7 +65,7 @@
 	--green-600_alpha: 1;
 	--green-600_lch: var(--green-600_lightness) var(--green-600_chroma) var(--green-600_hue);
 	--green-600_lcha: var(--green-600_lch) / var(--green-600_alpha);
-	--green-600: lcha(var(--green-600_lcha));
+	--green-600: lch(var(--green-600_lch));
 }
 
 :root {
@@ -75,7 +75,7 @@
 	--green-700_alpha: 1;
 	--green-700_lch: var(--green-700_lightness) var(--green-700_chroma) var(--green-700_hue);
 	--green-700_lcha: var(--green-700_lch) / var(--green-700_alpha);
-	--green-700: lcha(var(--green-700_lcha));
+	--green-700: lch(var(--green-700_lch));
 }
 
 :root {
@@ -85,7 +85,7 @@
 	--green-800_alpha: 1;
 	--green-800_lch: var(--green-800_lightness) var(--green-800_chroma) var(--green-800_hue);
 	--green-800_lcha: var(--green-800_lch) / var(--green-800_alpha);
-	--green-800: lcha(var(--green-800_lcha));
+	--green-800: lch(var(--green-800_lch));
 }
 
 :root {
@@ -95,5 +95,5 @@
 	--green-900_alpha: 1;
 	--green-900_lch: var(--green-900_lightness) var(--green-900_chroma) var(--green-900_hue);
 	--green-900_lcha: var(--green-900_lch) / var(--green-900_alpha);
-	--green-900: lcha(var(--green-900_lcha));
+	--green-900: lch(var(--green-900_lch));
 }

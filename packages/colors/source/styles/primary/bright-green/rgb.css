@@ -1,0 +1,7 @@
+:root {
+	--bright-green_red: 129;
+	--bright-green_green: 178;
+	--bright-green_blue: 93;
+	--bright-green_rgb: var(--bright-green_red) var(--bright-green_green) var(--bright-green_blue);
+	--bright-green: rgb(var(--bright-green_rgb));
+}

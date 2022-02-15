@@ -1,5 +1,5 @@
 :root {
-	--black_hue: NaNdeg;
+	--black_hue: 0deg;
 	--black_saturation: 0%;
 	--black_lightness: 23.137%;
 	--black_hsl: var(--black_hue) var(--black_saturation) var(--black_lightness);

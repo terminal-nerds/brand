@@ -5,5 +5,5 @@
 	--magenta_alpha: 1;
 	--magenta_lch: var(--magenta_lightness) var(--magenta_chroma) var(--magenta_hue);
 	--magenta_lcha: var(--magenta_lch) / var(--magenta_alpha);
-	--magenta: lcha(var(--magenta_lcha));
+	--magenta: lch(var(--magenta_lch));
 }

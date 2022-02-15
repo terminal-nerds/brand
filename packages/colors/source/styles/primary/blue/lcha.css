@@ -5,5 +5,5 @@
 	--blue_alpha: 1;
 	--blue_lch: var(--blue_lightness) var(--blue_chroma) var(--blue_hue);
 	--blue_lcha: var(--blue_lch) / var(--blue_alpha);
-	--blue: lcha(var(--blue_lcha));
+	--blue: lch(var(--blue_lch));
 }

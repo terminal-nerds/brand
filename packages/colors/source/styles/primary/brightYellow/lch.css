@@ -1,7 +1,0 @@
-:root {
-	--brightYellow_lightness: 53.725%;
-	--brightYellow_chroma: 49.203%;
-	--brightYellow_hue: 40deg;
-	--brightYellow_lch: var(--brightYellow_lightness) var(--brightYellow_chroma) var(--brightYellow_hue);
-	--brightYellow: lch(var(--brightYellow_lch));
-}

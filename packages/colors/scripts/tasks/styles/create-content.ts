@@ -1,9 +1,11 @@
-import { PRIMARY_COLORS, PRIMARY_COLOR_NAMES } from "$colors";
+import { PrimaryColorName, PRIMARY_COLORS, PRIMARY_COLOR_NAMES } from "$colors";
 import type { PrimaryColorFunction } from "$colors";
 import { COLOR_FUNCTIONS } from "$helpers/color-settings";
 import { COLORS_PALETTE, COLORS_PALETTE_NAMES } from "$palette/index";
 import type { PaletteColorSwatch, PaletteColorFunction } from "$palette/index";
 import { COLOR_SWATCHES } from "$utils/ColorPalette";
+import Case from "case";
+import type { KebabCase } from "type-fest";
 
 export function createColorsPaletteCSSContent() {
 	const outputs = new Map<PaletteColorFunction, string>();
@@ -28,7 +30,7 @@ export function createColorsPaletteCSSContent() {
 			}
 
 			outputs.set(
-				`${color}-${colorFunction}`,
+				`${color}_${colorFunction}`,
 				[...swatchesOutputs].join("\n\n"),
 			);
 		}
@@ -44,9 +46,11 @@ export function createPrimaryColorsCSSContent() {
 		for (const name of PRIMARY_COLOR_NAMES) {
 			const parameters = PRIMARY_COLORS[name];
 
+			const fixedName = Case.kebab(name) as KebabCase<PrimaryColorName>;
+
 			outputs.set(
-				`${name}-${colorFunction}`,
-				parameters.createCSSVariables(name, colorFunction),
+				`${fixedName}_${colorFunction}`,
+				parameters.createCSSVariables(fixedName, colorFunction),
 			);
 		}
 	}

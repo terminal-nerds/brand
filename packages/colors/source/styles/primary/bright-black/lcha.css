@@ -1,0 +1,9 @@
+:root {
+	--bright-black_lightness: 29.412%;
+	--bright-black_chroma: 0%;
+	--bright-black_hue: 0deg;
+	--bright-black_alpha: 1;
+	--bright-black_lch: var(--bright-black_lightness) var(--bright-black_chroma) var(--bright-black_hue);
+	--bright-black_lcha: var(--bright-black_lch) / var(--bright-black_alpha);
+	--bright-black: lch(var(--bright-black_lch));
+}

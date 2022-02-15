@@ -21,7 +21,7 @@ export const COLORS_PALETTE = {
 
 export type ColorPaletteName = keyof typeof COLORS_PALETTE;
 export type PaletteColorSwatch = `${ColorPaletteName}-${ColorSwatch}`;
-export type PaletteColorFunction = `${ColorPaletteName}-${ColorFunction}`;
+export type PaletteColorFunction = `${ColorPaletteName}_${ColorFunction}`;
 
 export const COLORS_PALETTE_NAMES = new Set<ColorPaletteName>(
 	Object.keys(COLORS_PALETTE) as Array<ColorPaletteName>,

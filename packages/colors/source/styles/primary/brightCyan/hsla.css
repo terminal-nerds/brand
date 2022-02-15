@@ -1,9 +1,0 @@
-:root {
-	--brightCyan_hue: 180.706deg;
-	--brightCyan_saturation: 35.565%;
-	--brightCyan_lightness: 53.137%;
-	--brightCyan_alpha: 1;
-	--brightCyan_hsl: var(--brightCyan_hue) var(--brightCyan_saturation) var(--brightCyan_lightness);
-	--brightCyan_hsla: var(--brightCyan_hsl) / var(--brightCyan_alpha);
-	--brightCyan: hsla(var(--brightCyan_hsla));
-}

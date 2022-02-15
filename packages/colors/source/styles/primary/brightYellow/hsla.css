@@ -1,9 +1,0 @@
-:root {
-	--brightYellow_hue: 40deg;
-	--brightYellow_saturation: 53.39%;
-	--brightYellow_lightness: 53.725%;
-	--brightYellow_alpha: 1;
-	--brightYellow_hsl: var(--brightYellow_hue) var(--brightYellow_saturation) var(--brightYellow_lightness);
-	--brightYellow_hsla: var(--brightYellow_hsl) / var(--brightYellow_alpha);
-	--brightYellow: hsla(var(--brightYellow_hsla));
-}

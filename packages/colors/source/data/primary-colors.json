@@ -2,7 +2,7 @@
 	"black": {
 		"alpha": 1,
 		"chroma": 0,
-		"hue": null,
+		"hue": 0,
 		"lightness": 23.137,
 		"saturation": 0,
 		"hex": "#3B3B3B",
@@ -13,7 +13,7 @@
 	"brightBlack": {
 		"alpha": 1,
 		"chroma": 0,
-		"hue": null,
+		"hue": 0,
 		"lightness": 29.412,
 		"saturation": 0,
 		"hex": "#4B4B4B",
@@ -156,7 +156,7 @@
 	"white": {
 		"alpha": 1,
 		"chroma": 0,
-		"hue": null,
+		"hue": 0,
 		"lightness": 98.039,
 		"saturation": 0,
 		"hex": "#FAFAFA",
@@ -167,7 +167,7 @@
 	"brightWhite": {
 		"alpha": 1,
 		"chroma": 0,
-		"hue": null,
+		"hue": 0,
 		"lightness": 92.941,
 		"saturation": 0,
 		"hex": "#EDEDED",

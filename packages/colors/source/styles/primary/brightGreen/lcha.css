@@ -1,9 +1,0 @@
-:root {
-	--brightGreen_lightness: 53.137%;
-	--brightGreen_chroma: 49.42%;
-	--brightGreen_hue: 94.588deg;
-	--brightGreen_alpha: 1;
-	--brightGreen_lch: var(--brightGreen_lightness) var(--brightGreen_chroma) var(--brightGreen_hue);
-	--brightGreen_lcha: var(--brightGreen_lch) / var(--brightGreen_alpha);
-	--brightGreen: lcha(var(--brightGreen_lcha));
-}

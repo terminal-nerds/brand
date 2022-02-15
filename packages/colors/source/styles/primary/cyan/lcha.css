@@ -5,5 +5,5 @@
 	--cyan_alpha: 1;
 	--cyan_lch: var(--cyan_lightness) var(--cyan_chroma) var(--cyan_hue);
 	--cyan_lcha: var(--cyan_lch) / var(--cyan_alpha);
-	--cyan: lcha(var(--cyan_lcha));
+	--cyan: lch(var(--cyan_lch));
 }

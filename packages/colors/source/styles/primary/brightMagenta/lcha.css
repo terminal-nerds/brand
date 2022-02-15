@@ -1,9 +1,0 @@
-:root {
-	--brightMagenta_lightness: 73.137%;
-	--brightMagenta_chroma: 48.5%;
-	--brightMagenta_hue: 274.699deg;
-	--brightMagenta_alpha: 1;
-	--brightMagenta_lch: var(--brightMagenta_lightness) var(--brightMagenta_chroma) var(--brightMagenta_hue);
-	--brightMagenta_lcha: var(--brightMagenta_lch) / var(--brightMagenta_alpha);
-	--brightMagenta: lcha(var(--brightMagenta_lcha));
-}

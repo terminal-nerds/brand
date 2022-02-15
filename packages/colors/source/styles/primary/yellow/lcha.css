@@ -5,5 +5,5 @@
 	--yellow_alpha: 1;
 	--yellow_lch: var(--yellow_lightness) var(--yellow_chroma) var(--yellow_hue);
 	--yellow_lcha: var(--yellow_lch) / var(--yellow_alpha);
-	--yellow: lcha(var(--yellow_lcha));
+	--yellow: lch(var(--yellow_lch));
 }

@@ -1,9 +1,0 @@
-:root {
-	--brightGreen_red: 129;
-	--brightGreen_green: 178;
-	--brightGreen_blue: 93;
-	--brightGreen_alpha: 1;
-	--brightGreen_rgb: var(--brightGreen_red) var(--brightGreen_green) var(--brightGreen_blue);
-	--brightGreen_rgba: var(--brightGreen_rgb) / var(--brightGreen_alpha);
-	--brightGreen: rgba(var(--brightGreen_rgba));
-}

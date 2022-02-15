@@ -1,3 +1,5 @@
+import Case from "case";
+
 import { PRIMARY_COLOR_NAMES } from "$colors";
 import { ColorFunction, COLOR_FUNCTIONS } from "$helpers/color-settings";
 import { COLORS_PALETTE_NAMES } from "$palette/index";
@@ -35,7 +37,7 @@ export function createPrimaryColorsImports() {
 		const imports = new Set<string>();
 
 		for (const name of PRIMARY_COLOR_NAMES) {
-			imports.add(setImport(name, colorFunction));
+			imports.add(setImport(Case.kebab(name), colorFunction));
 		}
 
 		outputs.set(colorFunction, wrapOutput(imports));

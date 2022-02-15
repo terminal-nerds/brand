@@ -59,7 +59,7 @@ const tasks = new Listr<Context>(
 
 				for (const [fileName, output] of context.colorsPalette
 					.content) {
-					const [colorName, colorFunction] = fileName.split("-");
+					const [colorName, colorFunction] = fileName.split("_");
 					const filePath = path.join(
 						OUTPUT_DIRECTORIES.source.colorsPalette,
 						`${colorName}`,
@@ -72,7 +72,7 @@ const tasks = new Listr<Context>(
 
 				for (const [fileName, output] of context.primaryColors
 					.content) {
-					const [colorName, colorFunction] = fileName.split("-");
+					const [colorName, colorFunction] = fileName.split("_");
 					const filePath = path.join(
 						OUTPUT_DIRECTORIES.source.primaryColors,
 						`${colorName}`,

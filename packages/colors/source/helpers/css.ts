@@ -181,7 +181,6 @@ export function createCSSVariablesLCH(
 	alpha = false,
 ) {
 	const variables = new Set<string>();
-	const colorFunction = alpha ? "lcha" : "lch";
 
 	variables.add(setVariable(name, "lightness", settings.lightness, "%"));
 	variables.add(setVariable(name, "chroma", settings.chroma, "%"));
@@ -197,7 +196,8 @@ export function createCSSVariablesLCH(
 		variables.add(setColorFunctionVariableWithAlpha(name, "lcha"));
 	}
 
-	variables.add(setFinalColorVariable(name, colorFunction));
+	// NOTE: `lcha` is not standarized, yet?
+	variables.add(setFinalColorVariable(name, "lch"));
 
 	return wrapVariables(variables);
 }

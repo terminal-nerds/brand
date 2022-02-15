@@ -227,7 +227,7 @@
 		"50": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 98.039,
 			"saturation": 0,
 			"hex": "#FAFAFA",
@@ -238,7 +238,7 @@
 		"100": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 92.941,
 			"saturation": 0,
 			"hex": "#EDEDED",
@@ -249,7 +249,7 @@
 		"200": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 83.137,
 			"saturation": 0,
 			"hex": "#D4D4D4",
@@ -260,7 +260,7 @@
 		"300": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 73.725,
 			"saturation": 0,
 			"hex": "#BCBCBC",
@@ -271,7 +271,7 @@
 		"400": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 64.314,
 			"saturation": 0,
 			"hex": "#A4A4A4",
@@ -282,7 +282,7 @@
 		"500": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 54.51,
 			"saturation": 0,
 			"hex": "#8B8B8B",
@@ -293,7 +293,7 @@
 		"600": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 44.706,
 			"saturation": 0,
 			"hex": "#727272",
@@ -304,7 +304,7 @@
 		"700": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 37.255,
 			"saturation": 0,
 			"hex": "#5F5F5F",
@@ -315,7 +315,7 @@
 		"800": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 29.412,
 			"saturation": 0,
 			"hex": "#4B4B4B",
@@ -326,7 +326,7 @@
 		"900": {
 			"alpha": 1,
 			"chroma": 0,
-			"hue": null,
+			"hue": 0,
 			"lightness": 23.137,
 			"saturation": 0,
 			"hex": "#3B3B3B",

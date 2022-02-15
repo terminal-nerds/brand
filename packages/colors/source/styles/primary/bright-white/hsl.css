@@ -1,0 +1,7 @@
+:root {
+	--bright-white_hue: 0deg;
+	--bright-white_saturation: 0%;
+	--bright-white_lightness: 92.941%;
+	--bright-white_hsl: var(--bright-white_hue) var(--bright-white_saturation) var(--bright-white_lightness);
+	--bright-white: hsl(var(--bright-white_hsl));
+}

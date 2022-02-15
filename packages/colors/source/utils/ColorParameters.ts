@@ -1,3 +1,5 @@
+import Case from "case";
+
 import { getColorSettings } from "$helpers/color-settings";
 import type {
 	ColorFunction,
@@ -89,6 +91,8 @@ export class ColorParameters implements ColorSettings {
 	}
 
 	createCSSVariables(name: string, colorFunction: ColorFunction) {
+		name = Case.kebab(name);
+
 		switch (colorFunction) {
 			case "hex": {
 				return createCSSVariablesHEX(name, this.hex);

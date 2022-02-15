@@ -1,0 +1,7 @@
+:root {
+	--bright-yellow_hue: 40deg;
+	--bright-yellow_saturation: 53.39%;
+	--bright-yellow_lightness: 53.725%;
+	--bright-yellow_hsl: var(--bright-yellow_hue) var(--bright-yellow_saturation) var(--bright-yellow_lightness);
+	--bright-yellow: hsl(var(--bright-yellow_hsl));
+}

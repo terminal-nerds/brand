@@ -1,9 +1,0 @@
-:root {
-	--brightWhite_lightness: 92.941%;
-	--brightWhite_chroma: 0%;
-	--brightWhite_hue: NaNdeg;
-	--brightWhite_alpha: 1;
-	--brightWhite_lch: var(--brightWhite_lightness) var(--brightWhite_chroma) var(--brightWhite_hue);
-	--brightWhite_lcha: var(--brightWhite_lch) / var(--brightWhite_alpha);
-	--brightWhite: lcha(var(--brightWhite_lcha));
-}

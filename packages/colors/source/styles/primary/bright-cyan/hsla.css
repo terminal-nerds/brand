@@ -1,0 +1,9 @@
+:root {
+	--bright-cyan_hue: 180.706deg;
+	--bright-cyan_saturation: 35.565%;
+	--bright-cyan_lightness: 53.137%;
+	--bright-cyan_alpha: 1;
+	--bright-cyan_hsl: var(--bright-cyan_hue) var(--bright-cyan_saturation) var(--bright-cyan_lightness);
+	--bright-cyan_hsla: var(--bright-cyan_hsl) / var(--bright-cyan_alpha);
+	--bright-cyan: hsla(var(--bright-cyan_hsla));
+}

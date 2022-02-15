@@ -1,0 +1,7 @@
+:root {
+	--bright-red_hue: 6.774deg;
+	--bright-red_saturation: 83.784%;
+	--bright-red_lightness: 70.98%;
+	--bright-red_hsl: var(--bright-red_hue) var(--bright-red_saturation) var(--bright-red_lightness);
+	--bright-red: hsl(var(--bright-red_hsl));
+}

@@ -1,7 +1,0 @@
-:root {
-	--brightBlack_red: 75;
-	--brightBlack_green: 75;
-	--brightBlack_blue: 75;
-	--brightBlack_rgb: var(--brightBlack_red) var(--brightBlack_green) var(--brightBlack_blue);
-	--brightBlack: rgb(var(--brightBlack_rgb));
-}

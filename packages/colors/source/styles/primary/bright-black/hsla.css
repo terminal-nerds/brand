@@ -1,0 +1,9 @@
+:root {
+	--bright-black_hue: 0deg;
+	--bright-black_saturation: 0%;
+	--bright-black_lightness: 29.412%;
+	--bright-black_alpha: 1;
+	--bright-black_hsl: var(--bright-black_hue) var(--bright-black_saturation) var(--bright-black_lightness);
+	--bright-black_hsla: var(--bright-black_hsl) / var(--bright-black_alpha);
+	--bright-black: hsla(var(--bright-black_hsla));
+}

@@ -55,7 +55,7 @@ export function getColorSettings(hex: HEX): ColorSettings {
 	return {
 		alpha,
 		chroma: roundNumber(chromaValue, 3),
-		hue: roundNumber(hue, 3),
+		hue: roundNumber(Number.isNaN(hue) ? 0 : hue, 3),
 		lightness: roundNumber(lightness * 100, 3),
 		saturation: roundNumber(saturation * 100, 3),
 		red,

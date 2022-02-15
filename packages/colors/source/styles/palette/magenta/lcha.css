@@ -5,7 +5,7 @@
 	--magenta-50_alpha: 1;
 	--magenta-50_lch: var(--magenta-50_lightness) var(--magenta-50_chroma) var(--magenta-50_hue);
 	--magenta-50_lcha: var(--magenta-50_lch) / var(--magenta-50_alpha);
-	--magenta-50: lcha(var(--magenta-50_lcha));
+	--magenta-50: lch(var(--magenta-50_lch));
 }
 
 :root {
@@ -15,7 +15,7 @@
 	--magenta-100_alpha: 1;
 	--magenta-100_lch: var(--magenta-100_lightness) var(--magenta-100_chroma) var(--magenta-100_hue);
 	--magenta-100_lcha: var(--magenta-100_lch) / var(--magenta-100_alpha);
-	--magenta-100: lcha(var(--magenta-100_lcha));
+	--magenta-100: lch(var(--magenta-100_lch));
 }
 
 :root {
@@ -25,7 +25,7 @@
 	--magenta-200_alpha: 1;
 	--magenta-200_lch: var(--magenta-200_lightness) var(--magenta-200_chroma) var(--magenta-200_hue);
 	--magenta-200_lcha: var(--magenta-200_lch) / var(--magenta-200_alpha);
-	--magenta-200: lcha(var(--magenta-200_lcha));
+	--magenta-200: lch(var(--magenta-200_lch));
 }
 
 :root {
@@ -35,7 +35,7 @@
 	--magenta-300_alpha: 1;
 	--magenta-300_lch: var(--magenta-300_lightness) var(--magenta-300_chroma) var(--magenta-300_hue);
 	--magenta-300_lcha: var(--magenta-300_lch) / var(--magenta-300_alpha);
-	--magenta-300: lcha(var(--magenta-300_lcha));
+	--magenta-300: lch(var(--magenta-300_lch));
 }
 
 :root {
@@ -45,7 +45,7 @@
 	--magenta-400_alpha: 1;
 	--magenta-400_lch: var(--magenta-400_lightness) var(--magenta-400_chroma) var(--magenta-400_hue);
 	--magenta-400_lcha: var(--magenta-400_lch) / var(--magenta-400_alpha);
-	--magenta-400: lcha(var(--magenta-400_lcha));
+	--magenta-400: lch(var(--magenta-400_lch));
 }
 
 :root {
@@ -55,7 +55,7 @@
 	--magenta-500_alpha: 1;
 	--magenta-500_lch: var(--magenta-500_lightness) var(--magenta-500_chroma) var(--magenta-500_hue);
 	--magenta-500_lcha: var(--magenta-500_lch) / var(--magenta-500_alpha);
-	--magenta-500: lcha(var(--magenta-500_lcha));
+	--magenta-500: lch(var(--magenta-500_lch));
 }
 
 :root {
@@ -65,7 +65,7 @@
 	--magenta-600_alpha: 1;
 	--magenta-600_lch: var(--magenta-600_lightness) var(--magenta-600_chroma) var(--magenta-600_hue);
 	--magenta-600_lcha: var(--magenta-600_lch) / var(--magenta-600_alpha);
-	--magenta-600: lcha(var(--magenta-600_lcha));
+	--magenta-600: lch(var(--magenta-600_lch));
 }
 
 :root {
@@ -75,7 +75,7 @@
 	--magenta-700_alpha: 1;
 	--magenta-700_lch: var(--magenta-700_lightness) var(--magenta-700_chroma) var(--magenta-700_hue);
 	--magenta-700_lcha: var(--magenta-700_lch) / var(--magenta-700_alpha);
-	--magenta-700: lcha(var(--magenta-700_lcha));
+	--magenta-700: lch(var(--magenta-700_lch));
 }
 
 :root {
@@ -85,7 +85,7 @@
 	--magenta-800_alpha: 1;
 	--magenta-800_lch: var(--magenta-800_lightness) var(--magenta-800_chroma) var(--magenta-800_hue);
 	--magenta-800_lcha: var(--magenta-800_lch) / var(--magenta-800_alpha);
-	--magenta-800: lcha(var(--magenta-800_lcha));
+	--magenta-800: lch(var(--magenta-800_lch));
 }
 
 :root {
@@ -95,5 +95,5 @@
 	--magenta-900_alpha: 1;
 	--magenta-900_lch: var(--magenta-900_lightness) var(--magenta-900_chroma) var(--magenta-900_hue);
 	--magenta-900_lcha: var(--magenta-900_lch) / var(--magenta-900_alpha);
-	--magenta-900: lcha(var(--magenta-900_lcha));
+	--magenta-900: lch(var(--magenta-900_lch));
 }
