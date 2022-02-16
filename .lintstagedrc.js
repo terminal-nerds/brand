@@ -13,13 +13,17 @@ const config = {
 	"*": ["pretty-quick --check --staged"],
 
 	// ESLint
-	"*.{js,json,ts,yml,yaml}": ["eslint"],
+	"*.{js,json,ts,yml,yaml}": [
+		'eslint --cache --cache-location "./node_modules/.cache/eslint"',
+	],
 
 	// markdownlint
 	"*.md": [`markdownlint --ignore "./.changeset/*.md"`],
 
 	// Stylelint
-	"*.css": ["stylelint"],
+	"*.css": [
+		'stylelint --cache --cache-location "./node_modules/.cache/stylelint"',
+	],
 
 	// syncpack
 	"**/package.json": ["syncpack list-mismatches", "syncpack format"],
