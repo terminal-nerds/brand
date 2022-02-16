@@ -1,1 +1,4 @@
 pnpm-lock.yaml
+
+/packages/colors/source/data/**/*.json
+/packages/colors/source/styles/**/*.css

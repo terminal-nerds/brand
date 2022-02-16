@@ -1,0 +1,10 @@
+:root {
+	--blue_red: 1;
+	--blue_green: 141;
+	--blue_blue: 248;
+	--blue_alpha: 1;
+
+	/* prettier-ignore */
+	--blue_rgb: var(--blue_red) var(--blue_green) var(--blue_blue);
+	--blue: rgb(var(--blue_rgb) var(--blue_alpha));
+}

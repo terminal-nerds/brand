@@ -1,0 +1,10 @@
+:root {
+	--bright-magenta_red: 193;
+	--bright-magenta_green: 145;
+	--bright-magenta_blue: 228;
+	--bright-magenta_alpha: 1;
+
+	/* prettier-ignore */
+	--bright-magenta_rgb: var(--bright-magenta_red) var(--bright-magenta_green) var(--bright-magenta_blue);
+	--bright-magenta: rgb(var(--bright-magenta_rgb) var(--bright-magenta_alpha));
+}

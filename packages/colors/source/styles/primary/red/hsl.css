@@ -1,0 +1,10 @@
+:root {
+	--red_hue: 4.8deg;
+	--red_saturation: 76.531%;
+	--red_lightness: 61.569%;
+	--red_alpha: 1;
+
+	/* prettier-ignore */
+	--red_hsl: var(--red_lightness) var(--red_hue) var(--red_saturation);
+	--red: hsl(var(--red_hsl) var(--red_alpha));
+}

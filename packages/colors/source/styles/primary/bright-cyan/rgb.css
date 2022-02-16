@@ -1,0 +1,10 @@
+:root {
+	--bright-cyan_red: 93;
+	--bright-cyan_green: 177;
+	--bright-cyan_blue: 178;
+	--bright-cyan_alpha: 1;
+
+	/* prettier-ignore */
+	--bright-cyan_rgb: var(--bright-cyan_red) var(--bright-cyan_green) var(--bright-cyan_blue);
+	--bright-cyan: rgb(var(--bright-cyan_rgb) var(--bright-cyan_alpha));
+}

@@ -1,0 +1,10 @@
+:root {
+	--blue_hue: 205.992deg;
+	--blue_saturation: 99.197%;
+	--blue_lightness: 48.824%;
+	--blue_alpha: 1;
+
+	/* prettier-ignore */
+	--blue_hsl: var(--blue_lightness) var(--blue_hue) var(--blue_saturation);
+	--blue: hsl(var(--blue_hsl) var(--blue_alpha));
+}

@@ -1,0 +1,109 @@
+:root {
+	--yellow-50_red: 253;
+	--yellow-50_green: 249;
+	--yellow-50_blue: 245;
+	--yellow-50_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-50_rgb: var(--yellow-50_red) var(--yellow-50_green) var(--yellow-50_blue);
+	--yellow-50: rgb(var(--yellow-50_rgb) var(--yellow-50_alpha));
+}
+
+:root {
+	--yellow-100_red: 248;
+	--yellow-100_green: 236;
+	--yellow-100_blue: 220;
+	--yellow-100_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-100_rgb: var(--yellow-100_red) var(--yellow-100_green) var(--yellow-100_blue);
+	--yellow-100: rgb(var(--yellow-100_rgb) var(--yellow-100_alpha));
+}
+
+:root {
+	--yellow-200_red: 234;
+	--yellow-200_green: 209;
+	--yellow-200_blue: 170;
+	--yellow-200_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-200_rgb: var(--yellow-200_red) var(--yellow-200_green) var(--yellow-200_blue);
+	--yellow-200: rgb(var(--yellow-200_rgb) var(--yellow-200_alpha));
+}
+
+:root {
+	--yellow-300_red: 219;
+	--yellow-300_green: 183;
+	--yellow-300_blue: 122;
+	--yellow-300_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-300_rgb: var(--yellow-300_red) var(--yellow-300_green) var(--yellow-300_blue);
+	--yellow-300: rgb(var(--yellow-300_rgb) var(--yellow-300_alpha));
+}
+
+:root {
+	--yellow-400_red: 200;
+	--yellow-400_green: 158;
+	--yellow-400_blue: 74;
+	--yellow-400_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-400_rgb: var(--yellow-400_red) var(--yellow-400_green) var(--yellow-400_blue);
+	--yellow-400: rgb(var(--yellow-400_rgb) var(--yellow-400_alpha));
+}
+
+:root {
+	--yellow-500_red: 178;
+	--yellow-500_green: 131;
+	--yellow-500_blue: 6;
+	--yellow-500_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-500_rgb: var(--yellow-500_red) var(--yellow-500_green) var(--yellow-500_blue);
+	--yellow-500: rgb(var(--yellow-500_rgb) var(--yellow-500_alpha));
+}
+
+:root {
+	--yellow-600_red: 146;
+	--yellow-600_green: 108;
+	--yellow-600_blue: 14;
+	--yellow-600_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-600_rgb: var(--yellow-600_red) var(--yellow-600_green) var(--yellow-600_blue);
+	--yellow-600: rgb(var(--yellow-600_rgb) var(--yellow-600_alpha));
+}
+
+:root {
+	--yellow-700_red: 121;
+	--yellow-700_green: 90;
+	--yellow-700_blue: 17;
+	--yellow-700_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-700_rgb: var(--yellow-700_red) var(--yellow-700_green) var(--yellow-700_blue);
+	--yellow-700: rgb(var(--yellow-700_rgb) var(--yellow-700_alpha));
+}
+
+:root {
+	--yellow-800_red: 95;
+	--yellow-800_green: 71;
+	--yellow-800_blue: 18;
+	--yellow-800_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-800_rgb: var(--yellow-800_red) var(--yellow-800_green) var(--yellow-800_blue);
+	--yellow-800: rgb(var(--yellow-800_rgb) var(--yellow-800_alpha));
+}
+
+:root {
+	--yellow-900_red: 75;
+	--yellow-900_green: 56;
+	--yellow-900_blue: 17;
+	--yellow-900_alpha: 1;
+
+	/* prettier-ignore */
+	--yellow-900_rgb: var(--yellow-900_red) var(--yellow-900_green) var(--yellow-900_blue);
+	--yellow-900: rgb(var(--yellow-900_rgb) var(--yellow-900_alpha));
+}

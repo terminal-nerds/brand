@@ -1,0 +1,10 @@
+:root {
+	--bright-black_red: 75;
+	--bright-black_green: 75;
+	--bright-black_blue: 75;
+	--bright-black_alpha: 1;
+
+	/* prettier-ignore */
+	--bright-black_rgb: var(--bright-black_red) var(--bright-black_green) var(--bright-black_blue);
+	--bright-black: rgb(var(--bright-black_rgb) var(--bright-black_alpha));
+}

@@ -1,0 +1,786 @@
+{
+	"blue": {
+		"50": {
+			"alpha": 1,
+			"chroma": 2.629,
+			"hue": 222.857,
+			"lightness": 98.627,
+			"saturation": 100,
+			"hex": "#F8FAFF",
+			"red": 248,
+			"green": 250,
+			"blue": 255
+		},
+		"100": {
+			"alpha": 1,
+			"chroma": 9.449,
+			"hue": 225,
+			"lightness": 95.294,
+			"saturation": 100,
+			"hex": "#E7EDFF",
+			"red": 231,
+			"green": 237,
+			"blue": 255
+		},
+		"200": {
+			"alpha": 1,
+			"chroma": 22.608,
+			"hue": 222.712,
+			"lightness": 88.039,
+			"saturation": 96.721,
+			"hex": "#C3D4FE",
+			"red": 195,
+			"green": 212,
+			"blue": 254
+		},
+		"300": {
+			"alpha": 1,
+			"chroma": 35.856,
+			"hue": 220.206,
+			"lightness": 80.196,
+			"saturation": 96.04,
+			"hex": "#9CBCFD",
+			"red": 156,
+			"green": 188,
+			"blue": 253
+		},
+		"400": {
+			"alpha": 1,
+			"chroma": 48.696,
+			"hue": 216.596,
+			"lightness": 70.784,
+			"saturation": 94.631,
+			"hex": "#6EA5FB",
+			"red": 110,
+			"green": 165,
+			"blue": 251
+		},
+		"500": {
+			"alpha": 1,
+			"chroma": 62.494,
+			"hue": 205.992,
+			"lightness": 48.824,
+			"saturation": 99.197,
+			"hex": "#018DF8",
+			"red": 1,
+			"green": 141,
+			"blue": 248
+		},
+		"600": {
+			"alpha": 1,
+			"chroma": 52.562,
+			"hue": 209.829,
+			"lightness": 44.902,
+			"saturation": 76.419,
+			"hex": "#1B73CA",
+			"red": 27,
+			"green": 115,
+			"blue": 202
+		},
+		"700": {
+			"alpha": 1,
+			"chroma": 43.733,
+			"hue": 211.343,
+			"lightness": 38.824,
+			"saturation": 67.677,
+			"hex": "#2060A6",
+			"red": 32,
+			"green": 96,
+			"blue": 166
+		},
+		"800": {
+			"alpha": 1,
+			"chroma": 34.485,
+			"hue": 213.125,
+			"lightness": 31.765,
+			"saturation": 59.259,
+			"hex": "#214C81",
+			"red": 33,
+			"green": 76,
+			"blue": 129
+		},
+		"900": {
+			"alpha": 1,
+			"chroma": 27.053,
+			"hue": 214.783,
+			"lightness": 25.686,
+			"saturation": 52.672,
+			"hex": "#1F3C64",
+			"red": 31,
+			"green": 60,
+			"blue": 100
+		}
+	},
+	"cyan": {
+		"50": {
+			"alpha": 1,
+			"chroma": 1.742,
+			"hue": 180,
+			"lightness": 97.451,
+			"saturation": 38.462,
+			"hex": "#F6FBFB",
+			"red": 246,
+			"green": 251,
+			"blue": 251
+		},
+		"100": {
+			"alpha": 1,
+			"chroma": 4.876,
+			"hue": 180,
+			"lightness": 91.373,
+			"saturation": 31.818,
+			"hex": "#E2F0F0",
+			"red": 226,
+			"green": 240,
+			"blue": 240
+		},
+		"200": {
+			"alpha": 1,
+			"chroma": 12.074,
+			"hue": 180,
+			"lightness": 79.02,
+			"saturation": 32.71,
+			"hex": "#B8DBDB",
+			"red": 184,
+			"green": 219,
+			"blue": 219
+		},
+		"300": {
+			"alpha": 1,
+			"chroma": 19.2,
+			"hue": 180,
+			"lightness": 66.471,
+			"saturation": 33.333,
+			"hex": "#8DC6C6",
+			"red": 141,
+			"green": 198,
+			"blue": 198
+		},
+		"400": {
+			"alpha": 1,
+			"chroma": 26.51,
+			"hue": 180.706,
+			"lightness": 53.137,
+			"saturation": 35.565,
+			"hex": "#5DB1B2",
+			"red": 93,
+			"green": 177,
+			"blue": 178
+		},
+		"500": {
+			"alpha": 1,
+			"chroma": 34.266,
+			"hue": 180.764,
+			"lightness": 30.784,
+			"saturation": 100,
+			"hex": "#009B9D",
+			"red": 0,
+			"green": 155,
+			"blue": 157
+		},
+		"600": {
+			"alpha": 1,
+			"chroma": 28.556,
+			"hue": 180.55,
+			"lightness": 28.824,
+			"saturation": 74.15,
+			"hex": "#137F80",
+			"red": 19,
+			"green": 127,
+			"blue": 128
+		},
+		"700": {
+			"alpha": 1,
+			"chroma": 23.79,
+			"hue": 180.732,
+			"lightness": 25.49,
+			"saturation": 63.077,
+			"hex": "#18696A",
+			"red": 24,
+			"green": 105,
+			"blue": 106
+		},
+		"800": {
+			"alpha": 1,
+			"chroma": 18.878,
+			"hue": 181.017,
+			"lightness": 21.373,
+			"saturation": 54.128,
+			"hex": "#195354",
+			"red": 25,
+			"green": 83,
+			"blue": 84
+		},
+		"900": {
+			"alpha": 1,
+			"chroma": 14.652,
+			"hue": 181.429,
+			"lightness": 17.647,
+			"saturation": 46.667,
+			"hex": "#184142",
+			"red": 24,
+			"green": 65,
+			"blue": 66
+		}
+	},
+	"gray": {
+		"50": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 98.039,
+			"saturation": 0,
+			"hex": "#FAFAFA",
+			"red": 250,
+			"green": 250,
+			"blue": 250
+		},
+		"100": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 92.941,
+			"saturation": 0,
+			"hex": "#EDEDED",
+			"red": 237,
+			"green": 237,
+			"blue": 237
+		},
+		"200": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 83.137,
+			"saturation": 0,
+			"hex": "#D4D4D4",
+			"red": 212,
+			"green": 212,
+			"blue": 212
+		},
+		"300": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 73.725,
+			"saturation": 0,
+			"hex": "#BCBCBC",
+			"red": 188,
+			"green": 188,
+			"blue": 188
+		},
+		"400": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 64.314,
+			"saturation": 0,
+			"hex": "#A4A4A4",
+			"red": 164,
+			"green": 164,
+			"blue": 164
+		},
+		"500": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 54.51,
+			"saturation": 0,
+			"hex": "#8B8B8B",
+			"red": 139,
+			"green": 139,
+			"blue": 139
+		},
+		"600": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 44.706,
+			"saturation": 0,
+			"hex": "#727272",
+			"red": 114,
+			"green": 114,
+			"blue": 114
+		},
+		"700": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 37.255,
+			"saturation": 0,
+			"hex": "#5F5F5F",
+			"red": 95,
+			"green": 95,
+			"blue": 95
+		},
+		"800": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 29.412,
+			"saturation": 0,
+			"hex": "#4B4B4B",
+			"red": 75,
+			"green": 75,
+			"blue": 75
+		},
+		"900": {
+			"alpha": 1,
+			"chroma": 0,
+			"hue": 0,
+			"lightness": 23.137,
+			"saturation": 0,
+			"hex": "#3B3B3B",
+			"red": 59,
+			"green": 59,
+			"blue": 59
+		}
+	},
+	"green": {
+		"50": {
+			"alpha": 1,
+			"chroma": 2.767,
+			"hue": 96,
+			"lightness": 97.451,
+			"saturation": 38.462,
+			"hex": "#F8FBF6",
+			"red": 248,
+			"green": 251,
+			"blue": 246
+		},
+		"100": {
+			"alpha": 1,
+			"chroma": 8.734,
+			"hue": 90,
+			"lightness": 90.98,
+			"saturation": 34.783,
+			"hex": "#E8F0E0",
+			"red": 232,
+			"green": 240,
+			"blue": 224
+		},
+		"200": {
+			"alpha": 1,
+			"chroma": 22.375,
+			"hue": 91.5,
+			"lightness": 78.039,
+			"saturation": 35.714,
+			"hex": "#C6DBB3",
+			"red": 198,
+			"green": 219,
+			"blue": 179
+		},
+		"300": {
+			"alpha": 1,
+			"chroma": 35.475,
+			"hue": 92.903,
+			"lightness": 65.49,
+			"saturation": 35.227,
+			"hex": "#A4C688",
+			"red": 164,
+			"green": 198,
+			"blue": 136
+		},
+		"400": {
+			"alpha": 1,
+			"chroma": 49.42,
+			"hue": 94.588,
+			"lightness": 53.137,
+			"saturation": 35.565,
+			"hex": "#81B25D",
+			"red": 129,
+			"green": 178,
+			"blue": 93
+		},
+		"500": {
+			"alpha": 1,
+			"chroma": 62.664,
+			"hue": 95.78,
+			"lightness": 39.412,
+			"saturation": 54.229,
+			"hex": "#5A9B2E",
+			"red": 90,
+			"green": 155,
+			"blue": 46
+		},
+		"600": {
+			"alpha": 1,
+			"chroma": 52.148,
+			"hue": 95.172,
+			"lightness": 32.745,
+			"saturation": 52.096,
+			"hex": "#4C7F28",
+			"red": 76,
+			"green": 127,
+			"blue": 40
+		},
+		"700": {
+			"alpha": 1,
+			"chroma": 43.309,
+			"hue": 95.652,
+			"lightness": 27.647,
+			"saturation": 48.936,
+			"hex": "#406924",
+			"red": 64,
+			"green": 105,
+			"blue": 36
+		},
+		"800": {
+			"alpha": 1,
+			"chroma": 34.821,
+			"hue": 95.094,
+			"lightness": 22.157,
+			"saturation": 46.903,
+			"hex": "#34531E",
+			"red": 52,
+			"green": 83,
+			"blue": 30
+		},
+		"900": {
+			"alpha": 1,
+			"chroma": 26.794,
+			"hue": 93.846,
+			"lightness": 17.843,
+			"saturation": 42.857,
+			"hex": "#2B411A",
+			"red": 43,
+			"green": 65,
+			"blue": 26
+		}
+	},
+	"magenta": {
+		"50": {
+			"alpha": 1,
+			"chroma": 2.766,
+			"hue": 276,
+			"lightness": 98.627,
+			"saturation": 71.429,
+			"hex": "#FCF9FE",
+			"red": 252,
+			"green": 249,
+			"blue": 254
+		},
+		"100": {
+			"alpha": 1,
+			"chroma": 8.988,
+			"hue": 277.5,
+			"lightness": 94.902,
+			"saturation": 61.538,
+			"hex": "#F4EAFA",
+			"red": 244,
+			"green": 234,
+			"blue": 250
+		},
+		"200": {
+			"alpha": 1,
+			"chroma": 22.242,
+			"hue": 276.923,
+			"lightness": 87.647,
+			"saturation": 61.905,
+			"hex": "#E4CCF3",
+			"red": 228,
+			"green": 204,
+			"blue": 243
+		},
+		"300": {
+			"alpha": 1,
+			"chroma": 35.315,
+			"hue": 276.393,
+			"lightness": 80.196,
+			"saturation": 60.396,
+			"hex": "#D3AEEB",
+			"red": 211,
+			"green": 174,
+			"blue": 235
+		},
+		"400": {
+			"alpha": 1,
+			"chroma": 48.5,
+			"hue": 274.699,
+			"lightness": 73.137,
+			"saturation": 60.584,
+			"hex": "#C191E4",
+			"red": 193,
+			"green": 145,
+			"blue": 228
+		},
+		"500": {
+			"alpha": 1,
+			"chroma": 62.607,
+			"hue": 273.962,
+			"lightness": 65.098,
+			"saturation": 59.551,
+			"hex": "#AD71DB",
+			"red": 173,
+			"green": 113,
+			"blue": 219
+		},
+		"600": {
+			"alpha": 1,
+			"chroma": 52.17,
+			"hue": 273.882,
+			"lightness": 53.137,
+			"saturation": 35.565,
+			"hex": "#8D5DB2",
+			"red": 141,
+			"green": 93,
+			"blue": 178
+		},
+		"700": {
+			"alpha": 1,
+			"chroma": 43.856,
+			"hue": 273.913,
+			"lightness": 44.118,
+			"saturation": 30.667,
+			"hex": "#754E93",
+			"red": 117,
+			"green": 78,
+			"blue": 147
+		},
+		"800": {
+			"alpha": 1,
+			"chroma": 34.626,
+			"hue": 274.615,
+			"lightness": 34.51,
+			"saturation": 29.545,
+			"hex": "#5C3E72",
+			"red": 92,
+			"green": 62,
+			"blue": 114
+		},
+		"900": {
+			"alpha": 1,
+			"chroma": 27.041,
+			"hue": 273.846,
+			"lightness": 27.255,
+			"saturation": 28.058,
+			"hex": "#483259",
+			"red": 72,
+			"green": 50,
+			"blue": 89
+		}
+	},
+	"red": {
+		"50": {
+			"alpha": 1,
+			"chroma": 2.342,
+			"hue": 15,
+			"lightness": 98.431,
+			"saturation": 100,
+			"hex": "#FFF9F7",
+			"red": 255,
+			"green": 249,
+			"blue": 247
+		},
+		"100": {
+			"alpha": 1,
+			"chroma": 8.251,
+			"hue": 9.231,
+			"lightness": 94.902,
+			"saturation": 100,
+			"hex": "#FFE9E5",
+			"red": 255,
+			"green": 233,
+			"blue": 229
+		},
+		"200": {
+			"alpha": 1,
+			"chroma": 22.251,
+			"hue": 8.308,
+			"lightness": 87.255,
+			"saturation": 100,
+			"hex": "#FFC7BE",
+			"red": 255,
+			"green": 199,
+			"blue": 190
+		},
+		"300": {
+			"alpha": 1,
+			"chroma": 35.567,
+			"hue": 7.423,
+			"lightness": 79.412,
+			"saturation": 92.381,
+			"hex": "#FBA69A",
+			"red": 251,
+			"green": 166,
+			"blue": 154
+		},
+		"400": {
+			"alpha": 1,
+			"chroma": 48.358,
+			"hue": 6.774,
+			"lightness": 70.98,
+			"saturation": 83.784,
+			"hex": "#F38577",
+			"red": 243,
+			"green": 133,
+			"blue": 119
+		},
+		"500": {
+			"alpha": 1,
+			"chroma": 62.949,
+			"hue": 4.8,
+			"lightness": 61.569,
+			"saturation": 76.531,
+			"hex": "#E85E52",
+			"red": 232,
+			"green": 94,
+			"blue": 82
+		},
+		"600": {
+			"alpha": 1,
+			"chroma": 52.205,
+			"hue": 5.455,
+			"lightness": 50.392,
+			"saturation": 47.826,
+			"hex": "#BD4F44",
+			"red": 189,
+			"green": 79,
+			"blue": 68
+		},
+		"700": {
+			"alpha": 1,
+			"chroma": 43.524,
+			"hue": 5.51,
+			"lightness": 41.961,
+			"saturation": 45.794,
+			"hex": "#9C433A",
+			"red": 156,
+			"green": 67,
+			"blue": 58
+		},
+		"800": {
+			"alpha": 1,
+			"chroma": 34.517,
+			"hue": 5.6,
+			"lightness": 33.137,
+			"saturation": 44.379,
+			"hex": "#7A362F",
+			"red": 122,
+			"green": 54,
+			"blue": 47
+		},
+		"900": {
+			"alpha": 1,
+			"chroma": 26.931,
+			"hue": 6.316,
+			"lightness": 26.078,
+			"saturation": 42.857,
+			"hex": "#5F2C26",
+			"red": 95,
+			"green": 44,
+			"blue": 38
+		}
+	},
+	"yellow": {
+		"50": {
+			"alpha": 1,
+			"chroma": 2.468,
+			"hue": 30,
+			"lightness": 97.647,
+			"saturation": 66.667,
+			"hex": "#FDF9F5",
+			"red": 253,
+			"green": 249,
+			"blue": 245
+		},
+		"100": {
+			"alpha": 1,
+			"chroma": 9.308,
+			"hue": 34.286,
+			"lightness": 91.765,
+			"saturation": 66.667,
+			"hex": "#F8ECDC",
+			"red": 248,
+			"green": 236,
+			"blue": 220
+		},
+		"200": {
+			"alpha": 1,
+			"chroma": 22.747,
+			"hue": 36.563,
+			"lightness": 79.216,
+			"saturation": 60.377,
+			"hex": "#EAD1AA",
+			"red": 234,
+			"green": 209,
+			"blue": 170
+		},
+		"300": {
+			"alpha": 1,
+			"chroma": 36.146,
+			"hue": 37.732,
+			"lightness": 66.863,
+			"saturation": 57.396,
+			"hex": "#DBB77A",
+			"red": 219,
+			"green": 183,
+			"blue": 122
+		},
+		"400": {
+			"alpha": 1,
+			"chroma": 49.203,
+			"hue": 40,
+			"lightness": 53.725,
+			"saturation": 53.39,
+			"hex": "#C89E4A",
+			"red": 200,
+			"green": 158,
+			"blue": 74
+		},
+		"500": {
+			"alpha": 1,
+			"chroma": 62.782,
+			"hue": 43.605,
+			"lightness": 36.078,
+			"saturation": 93.478,
+			"hex": "#B28306",
+			"red": 178,
+			"green": 131,
+			"blue": 6
+		},
+		"600": {
+			"alpha": 1,
+			"chroma": 52.236,
+			"hue": 42.727,
+			"lightness": 31.373,
+			"saturation": 82.5,
+			"hex": "#926C0E",
+			"red": 146,
+			"green": 108,
+			"blue": 14
+		},
+		"700": {
+			"alpha": 1,
+			"chroma": 43.597,
+			"hue": 42.115,
+			"lightness": 27.059,
+			"saturation": 75.362,
+			"hex": "#795A11",
+			"red": 121,
+			"green": 90,
+			"blue": 17
+		},
+		"800": {
+			"alpha": 1,
+			"chroma": 34.217,
+			"hue": 41.299,
+			"lightness": 22.157,
+			"saturation": 68.142,
+			"hex": "#5F4712",
+			"red": 95,
+			"green": 71,
+			"blue": 18
+		},
+		"900": {
+			"alpha": 1,
+			"chroma": 26.923,
+			"hue": 40.345,
+			"lightness": 18.039,
+			"saturation": 63.043,
+			"hex": "#4B3811",
+			"red": 75,
+			"green": 56,
+			"blue": 17
+		}
+	}
+}

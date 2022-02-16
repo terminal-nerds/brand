@@ -1,0 +1,10 @@
+:root {
+	--cyan_lightness: 30.784%;
+	--cyan_chroma: 34.266%;
+	--cyan_hue: 180.764deg;
+	--cyan_alpha: 1;
+
+	/* prettier-ignore */
+	--cyan_lch: var(--cyan_lightness) var(--cyan_chroma) var(--cyan_hue);
+	--cyan: lch(var(--cyan_lch) var(--cyan_alpha));
+}

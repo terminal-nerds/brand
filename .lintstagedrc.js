@@ -1,22 +1,40 @@
 // https://github.com/okonet/lint-staged
 
+function groupByPackagePath(filenames) {
+	const pattern = new RegExp("(?<=/)packages/.*?(?=/)");
+
+	return [
+		...new Set(filenames.map((filename) => filename.match(pattern)[0])),
+	];
+}
+
 const config = {
 	// Prettier
 	"*": ["pretty-quick --check --staged"],
 
 	// ESLint
-	"*.{js,json,ts,yml,yaml}": ["eslint"],
-
-	// syncpack
-	"**/package.json": ["syncpack list-mismatches", "syncpack format"],
+	"*.{js,json,ts,yml,yaml}": [
+		'eslint --cache --cache-location "./node_modules/.cache/eslint"',
+	],
 
 	// markdownlint
 	"*.md": [`markdownlint --ignore "./.changeset/*.md"`],
 
-	// TypeScript types (in each package, because of different configs)
+	// Stylelint
+	"*.css": [
+		'stylelint --cache --cache-location "./node_modules/.cache/stylelint"',
+	],
+
+	// syncpack
+	"**/package.json": ["syncpack list-mismatches", "syncpack format"],
+
+	// TypeScript types (in each module/package, because of different configs)
 	"./helpers/**/*.ts": () => `tsc --project ./helpers/tsconfig.json --noEmit`,
-	// "./packages/logo/source/**/*.ts": () =>
-	// 	`tsc --project ./packages/logo/tsconfig.json --noEmit`,
+	"./packages/*/source/**/*.ts": (filenames) =>
+		groupByPackagePath(filenames).map(
+			(packagePath) =>
+				`tsc --project ./${packagePath}/tsconfig.json --noEmit`,
+		),
 };
 
 export default config;

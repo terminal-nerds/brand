@@ -1,0 +1,10 @@
+:root {
+	--bright-white_red: 237;
+	--bright-white_green: 237;
+	--bright-white_blue: 237;
+	--bright-white_alpha: 1;
+
+	/* prettier-ignore */
+	--bright-white_rgb: var(--bright-white_red) var(--bright-white_green) var(--bright-white_blue);
+	--bright-white: rgb(var(--bright-white_rgb) var(--bright-white_alpha));
+}

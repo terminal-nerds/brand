@@ -1,0 +1,10 @@
+:root {
+	--bright-white_lightness: 92.941%;
+	--bright-white_chroma: 0%;
+	--bright-white_hue: 0deg;
+	--bright-white_alpha: 1;
+
+	/* prettier-ignore */
+	--bright-white_lch: var(--bright-white_lightness) var(--bright-white_chroma) var(--bright-white_hue);
+	--bright-white: lch(var(--bright-white_lch) var(--bright-white_alpha));
+}

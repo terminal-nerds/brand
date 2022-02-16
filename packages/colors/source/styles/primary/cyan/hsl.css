@@ -1,0 +1,10 @@
+:root {
+	--cyan_hue: 180.764deg;
+	--cyan_saturation: 100%;
+	--cyan_lightness: 30.784%;
+	--cyan_alpha: 1;
+
+	/* prettier-ignore */
+	--cyan_hsl: var(--cyan_lightness) var(--cyan_hue) var(--cyan_saturation);
+	--cyan: hsl(var(--cyan_hsl) var(--cyan_alpha));
+}

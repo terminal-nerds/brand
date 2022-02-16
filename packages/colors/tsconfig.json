@@ -1,0 +1,22 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "@terminal-nerds/typescript-config",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"composite": true,
+		"lib": ["ESNext", "DOM"],
+		"module": "ESNext",
+		"outDir": "./dist",
+		"paths": {
+			"$colors": ["./source/index"],
+			"$helpers/*": ["./source/helpers/*"],
+			"$palette/*": ["source/palette/*"],
+			"$utils/*": ["source/utils/*"]
+		},
+		"rootDir": ".",
+		"tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo",
+		"types": ["chroma-js", "node"]
+	},
+	"exclude": ["dist/", "node_modules/"],
+	"include": ["scripts/", "source/"]
+}
