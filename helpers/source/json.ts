@@ -10,6 +10,6 @@ export function stringifyJSONWithTabs(
 	return JSON.stringify(output, undefined, "\t");
 }
 
-export function minifyJSONData(output: string) {
-	return output.replace(/[\t\n]/g, "").replace(/ (?=[\d"{}])/g, "");
+export function minifyJSON(output: string) {
+	return JSON.stringify(JSON.parse(output));
 }
