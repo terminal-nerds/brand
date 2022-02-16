@@ -1,3 +1,5 @@
+import prettier from "prettier";
+
 import type {
 	Alpha,
 	Blue,
@@ -6,28 +8,20 @@ import type {
 	ColorSettings,
 	Green,
 	HEX,
-	HEXA,
 	HSL,
-	HSLA,
 	Hue,
 	LCH,
-	LCHA,
 	Lightness,
 	Red,
 	RGB,
-	RGBA,
 	Saturation,
 } from "./color-settings";
 
 export interface CSSFormats {
 	hex: HEX;
-	hexa: HEXA;
-	hsl: `hsl(${Hue}deg ${Saturation}% ${Lightness}%)`;
-	hsla: `hsla(${Hue}deg ${Saturation}% ${Lightness}% / ${Alpha})`;
-	lch: `lch(${Lightness}% ${Chroma}% ${Hue}deg)`;
-	lcha: `lcha(${Lightness}% ${Chroma}% ${Hue}deg / ${Alpha})`;
-	rgb: `rgb(${Red} ${Green} ${Blue})`;
-	rgba: `rgba(${Red} ${Green} ${Blue} / ${Alpha})`;
+	hsl: `hsla(${Hue}deg ${Saturation}% ${Lightness}% / ${Alpha})`;
+	lch: `lcha(${Lightness}% ${Chroma}% ${Hue}deg / ${Alpha})`;
+	rgb: `rgba(${Red} ${Green} ${Blue} / ${Alpha})`;
 }
 
 export function getCSS<K extends keyof CSSFormats>(
@@ -38,33 +32,18 @@ export function getCSS<K extends keyof CSSFormats>(
 		case "hex":
 			// @ts-ignore FIXME: I don't know how to fix it
 			return settings.hex;
-		case "hexa":
-			// @ts-ignore FIXME: I don't know how to fix it
-			return settings.hexa;
 
 		case "hsl": {
-			// @ts-ignore FIXME: I don't know how to fix it
-			return `hsl(${settings.hue}deg ${settings.saturation}% ${settings.lightness}%)`;
-		}
-		case "hsla": {
 			// @ts-ignore FIXME: I don't know how to fix it
 			return `hsla(${settings.hue}deg ${settings.saturation}% ${settings.lightness}% / ${settings.alpha})`;
 		}
 
 		case "lch": {
 			// @ts-ignore FIXME: I don't know how to fix it
-			return `lch(${settings.lightness}% ${settings.chroma}% ${settings.hue}deg)`;
-		}
-		case "lcha": {
-			// @ts-ignore FIXME: I don't know how to fix it
 			return `lcha(${settings.lightness}% ${settings.chroma}% ${settings.hue}deg / ${settings.alpha})`;
 		}
 
 		case "rgb": {
-			// @ts-ignore FIXME: I don't know how to fix it
-			return `rgb(${settings.red} ${settings.green} ${settings.blue})`;
-		}
-		case "rgba": {
 			// @ts-ignore FIXME: I don't know how to fix it
 			return `rgba(${settings.red} ${settings.green} ${settings.blue} / ${settings.alpha})`;
 		}
@@ -75,156 +54,132 @@ export function getCSS<K extends keyof CSSFormats>(
 	}
 }
 
-function setVariable(
+function createVariable(name: string): `var(--${string})` {
+	return `var(--${name})`;
+}
+
+function setCustomProperty(
 	name: string,
 	key: keyof ColorSettings | string,
 	value: number | string,
-	unit?: string,
+	options?: {
+		unit?: string;
+		prefix?: string;
+		suffix?: string;
+	},
 ) {
-	let customProperty = name;
+	let customProperty = `--${name}`;
 
 	if (key) {
-		customProperty = `${customProperty}_${key}`;
+		customProperty += `_${key}`;
 	}
 
-	return `${customProperty}: ${value}${unit ?? ""}`;
+	// prettier-ignore
+	return `${options?.prefix ?? ""}${customProperty}: ${value}${options?.unit ?? ""}${options?.suffix ?? ""}`;
 }
 
 function setColorFunctionVariable(
 	name: string,
 	colorFunction: Extract<ColorFunction, "hsl" | "lch" | "rgb">,
 ) {
-	let value = "";
+	const values = new Set<string>();
 
 	switch (colorFunction) {
 		case "hsl": {
-			value = `var(--${name}_hue) var(--${name}_saturation) var(--${name}_lightness)`;
+			values.add(createVariable(`${name}_lightness`));
+			values.add(createVariable(`${name}_hue`));
+			values.add(createVariable(`${name}_saturation`));
 			break;
 		}
 
 		case "lch": {
-			value = `var(--${name}_lightness) var(--${name}_chroma) var(--${name}_hue)`;
+			values.add(createVariable(`${name}_lightness`));
+			values.add(createVariable(`${name}_chroma`));
+			values.add(createVariable(`${name}_hue`));
 			break;
 		}
 
 		case "rgb": {
-			value = `var(--${name}_red) var(--${name}_green) var(--${name}_blue)`;
+			values.add(createVariable(`${name}_red`));
+			values.add(createVariable(`${name}_green`));
+			values.add(createVariable(`${name}_blue`));
 			break;
 		}
 	}
 
-	return setVariable(name, colorFunction, value);
-}
-
-function setColorFunctionVariableWithAlpha(
-	name: string,
-	colorFormat: Extract<ColorFunction, "hsla" | "lcha" | "rgba">,
-) {
-	return setVariable(
-		name,
-		colorFormat,
-		`var(--${name}_${colorFormat.slice(0, -1)}) / var(--${name}_alpha)`,
-	);
+	return setCustomProperty(name, colorFunction, [...values].join(" "), {
+		// Prettify the output and to ignore Stylelint warning about empty line
+		// before comment
+		prefix: "\n\n\t/* prettier-ignore */\n",
+	});
 }
 
 function setFinalColorVariable(name: string, colorFunction: ColorFunction) {
-	return setVariable(
+	return setCustomProperty(
 		name,
 		"",
-		`${colorFunction}(var(--${name}_${colorFunction}))`,
+		`${colorFunction}(var(--${name}_${colorFunction}) var(--${name}_alpha))`,
 	);
 }
 
-function wrapVariables(variables: Set<string>) {
-	const output = [...variables]
-		.map((variable) => `\t--${variable};`)
-		.join("\n");
+function wrapVariablesInRoot(variables: Set<string>) {
+	const output = [...variables].join(";");
 
-	return `:root {\n${output}\n}`;
+	return formatCSSOutput(`:root {${output}}`);
 }
 
-export function createCSSVariablesHEX(name: string, value: HEX | HEXA) {
-	return wrapVariables(new Set([setVariable(name, "", value)]));
+export function createCSSVariablesHEX(name: string, value: HEX) {
+	return wrapVariablesInRoot(new Set([setCustomProperty(name, "", value)]));
 }
 
-export function createCSSVariablesHSL(
-	name: string,
-	settings: HSL | HSLA,
-	alpha = false,
-) {
+export function createCSSVariablesHSL(name: string, settings: HSL) {
 	const variables = new Set<string>();
-	const colorFunction = alpha ? "hsla" : "hsl";
 
-	variables.add(setVariable(name, "hue", settings.hue, "deg"));
 	// prettier-ignore
-	variables.add(setVariable(name, "saturation", settings.saturation, "%"));
-	variables.add(setVariable(name, "lightness", settings.lightness, "%"));
-
-	if (alpha && "alpha" in settings) {
-		variables.add(setVariable(name, "alpha", settings.alpha));
-	}
+	variables.add(setCustomProperty(name, "hue", settings.hue, { unit: "deg" }));
+	// prettier-ignore
+	variables.add(setCustomProperty(name, "saturation", settings.saturation, { unit: "%" }));
+	// prettier-ignore
+	variables.add(setCustomProperty(name, "lightness", settings.lightness, { unit: "%" }));
+	variables.add(setCustomProperty(name, "alpha", settings.alpha));
 
 	variables.add(setColorFunctionVariable(name, "hsl"));
+	variables.add(setFinalColorVariable(name, "hsl"));
 
-	if (alpha) {
-		variables.add(setColorFunctionVariableWithAlpha(name, "hsla"));
-	}
-
-	variables.add(setFinalColorVariable(name, colorFunction));
-
-	return wrapVariables(variables);
+	return wrapVariablesInRoot(variables);
 }
 
-export function createCSSVariablesLCH(
-	name: string,
-	settings: LCH | LCHA,
-	alpha = false,
-) {
+export function createCSSVariablesLCH(name: string, settings: LCH) {
 	const variables = new Set<string>();
 
-	variables.add(setVariable(name, "lightness", settings.lightness, "%"));
-	variables.add(setVariable(name, "chroma", settings.chroma, "%"));
-	variables.add(setVariable(name, "hue", settings.hue, "deg"));
-
-	if (alpha && "alpha" in settings) {
-		variables.add(setVariable(name, "alpha", settings.alpha));
-	}
+	// prettier-ignore
+	variables.add(setCustomProperty(name, "lightness", settings.lightness, { unit: "%" }));
+	// prettier-ignore
+	variables.add(setCustomProperty(name, "chroma", settings.chroma, { unit: "%" }));
+	// prettier-ignore
+	variables.add(setCustomProperty(name, "hue", settings.hue, { unit: "deg" }));
+	variables.add(setCustomProperty(name, "alpha", settings.alpha));
 
 	variables.add(setColorFunctionVariable(name, "lch"));
-
-	if (alpha) {
-		variables.add(setColorFunctionVariableWithAlpha(name, "lcha"));
-	}
-
-	// NOTE: `lcha` is not standarized, yet?
 	variables.add(setFinalColorVariable(name, "lch"));
 
-	return wrapVariables(variables);
+	return wrapVariablesInRoot(variables);
 }
 
-export function createCSSVariablesRGB(
-	name: string,
-	settings: RGB | RGBA,
-	alpha = false,
-) {
+export function createCSSVariablesRGB(name: string, settings: RGB) {
 	const variables = new Set<string>();
-	const colorFunction = alpha ? "rgba" : "rgb";
 
-	variables.add(setVariable(name, "red", settings.red));
-	variables.add(setVariable(name, "green", settings.green));
-	variables.add(setVariable(name, "blue", settings.blue));
-
-	if (alpha && "alpha" in settings) {
-		variables.add(setVariable(name, "alpha", settings.alpha));
-	}
+	variables.add(setCustomProperty(name, "red", settings.red));
+	variables.add(setCustomProperty(name, "green", settings.green));
+	variables.add(setCustomProperty(name, "blue", settings.blue));
+	variables.add(setCustomProperty(name, "alpha", settings.alpha));
 
 	variables.add(setColorFunctionVariable(name, "rgb"));
+	variables.add(setFinalColorVariable(name, "rgb"));
 
-	if (alpha) {
-		variables.add(setColorFunctionVariableWithAlpha(name, "rgba"));
-	}
+	return wrapVariablesInRoot(variables);
+}
 
-	variables.add(setFinalColorVariable(name, colorFunction));
-
-	return wrapVariables(variables);
+function formatCSSOutput(output: string): string {
+	return prettier.format(output, { parser: "css", useTabs: true });
 }

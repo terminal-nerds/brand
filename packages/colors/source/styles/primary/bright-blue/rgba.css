@@ -1,9 +1,0 @@
-:root {
-	--bright-blue_red: 110;
-	--bright-blue_green: 165;
-	--bright-blue_blue: 251;
-	--bright-blue_alpha: 1;
-	--bright-blue_rgb: var(--bright-blue_red) var(--bright-blue_green) var(--bright-blue_blue);
-	--bright-blue_rgba: var(--bright-blue_rgb) / var(--bright-blue_alpha);
-	--bright-blue: rgba(var(--bright-blue_rgba));
-}

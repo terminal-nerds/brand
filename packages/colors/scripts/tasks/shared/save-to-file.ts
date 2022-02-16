@@ -1,13 +1,10 @@
 import fse from "fs-extra";
+import prettier from "prettier";
 
-/**
- * @description The purpose of this is to quiet Prettier warnings in the
- * created source files
- */
-function appendNewLine(output: string) {
-	return `${output}\n`;
+export function formatOutput(output: string, parser: "css" | "json") {
+	return prettier.format(output, { parser, useTabs: true });
 }
 
-export function saveOutputToFile(data: string, outputFile: string) {
-	fse.outputFileSync(outputFile, appendNewLine(data), { encoding: "utf-8" });
+export function saveOutputToFile(output: string, outputFile: string) {
+	fse.outputFileSync(outputFile, output, { encoding: "utf-8" });
 }

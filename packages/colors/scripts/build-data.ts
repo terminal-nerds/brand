@@ -2,7 +2,7 @@ import path from "node:path";
 
 import { Listr } from "listr2";
 
-import { minifyJSONData } from "@workspace/helpers/json";
+import { minifyJSON } from "@workspace/helpers/json";
 
 import {
 	createColorsPaletteJSON,
@@ -79,13 +79,13 @@ const tasks = new Listr<Context>(
 				);
 
 				saveOutputToFile(
-					minifyJSONData(context.colorsPaletteJSON),
+					minifyJSON(context.colorsPaletteJSON),
 					colorsPaletteFilePath,
 				);
 				task.output += `\n${colorsPaletteFilePath}\n`;
 
 				saveOutputToFile(
-					minifyJSONData(context.primaryColorsJSON),
+					minifyJSON(context.primaryColorsJSON),
 					primaryColorsFilePath,
 				);
 				task.output += `\n${primaryColorsFilePath}`;

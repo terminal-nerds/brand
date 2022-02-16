@@ -2,6 +2,9 @@
 	--bright-green_lightness: 53.137%;
 	--bright-green_chroma: 49.42%;
 	--bright-green_hue: 94.588deg;
+	--bright-green_alpha: 1;
+
+	/* prettier-ignore */
 	--bright-green_lch: var(--bright-green_lightness) var(--bright-green_chroma) var(--bright-green_hue);
-	--bright-green: lch(var(--bright-green_lch));
+	--bright-green: lch(var(--bright-green_lch) var(--bright-green_alpha));
 }

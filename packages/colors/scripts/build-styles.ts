@@ -8,7 +8,7 @@ import {
 	createColorsPaletteCSSContent,
 	createPrimaryColorsCSSContent,
 } from "./tasks/styles/create-content";
-import { saveOutputToFile } from "./tasks/shared/save-to-file";
+import { formatOutput, saveOutputToFile } from "./tasks/shared/save-to-file";
 import {
 	createColorsPaletteImports,
 	createPrimaryColorsImports,
@@ -66,7 +66,7 @@ const tasks = new Listr<Context>(
 						`${colorFunction}.css`,
 					);
 
-					saveOutputToFile(output, filePath);
+					saveOutputToFile(formatOutput(output, "css"), filePath);
 					task.output += `\n${filePath}`;
 				}
 
@@ -79,7 +79,7 @@ const tasks = new Listr<Context>(
 						`${colorFunction}.css`,
 					);
 
-					saveOutputToFile(output, filePath);
+					saveOutputToFile(formatOutput(output, "css"), filePath);
 					task.output += `\n${filePath}`;
 				}
 			},
@@ -112,7 +112,7 @@ const tasks = new Listr<Context>(
 						`${colorFunction}.css`,
 					);
 
-					saveOutputToFile(output, filePath);
+					saveOutputToFile(formatOutput(output, "css"), filePath);
 					task.output += `\n${filePath}`;
 				}
 
@@ -123,7 +123,7 @@ const tasks = new Listr<Context>(
 						`${colorFunction}.css`,
 					);
 
-					saveOutputToFile(output, filePath);
+					saveOutputToFile(formatOutput(output, "css"), filePath);
 					task.output += `\n${filePath}`;
 				}
 			},

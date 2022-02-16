@@ -1,9 +1,0 @@
-:root {
-	--bright-magenta_red: 193;
-	--bright-magenta_green: 145;
-	--bright-magenta_blue: 228;
-	--bright-magenta_alpha: 1;
-	--bright-magenta_rgb: var(--bright-magenta_red) var(--bright-magenta_green) var(--bright-magenta_blue);
-	--bright-magenta_rgba: var(--bright-magenta_rgb) / var(--bright-magenta_alpha);
-	--bright-magenta: rgba(var(--bright-magenta_rgba));
-}

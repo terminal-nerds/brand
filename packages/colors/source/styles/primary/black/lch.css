@@ -2,6 +2,9 @@
 	--black_lightness: 23.137%;
 	--black_chroma: 0%;
 	--black_hue: 0deg;
+	--black_alpha: 1;
+
+	/* prettier-ignore */
 	--black_lch: var(--black_lightness) var(--black_chroma) var(--black_hue);
-	--black: lch(var(--black_lch));
+	--black: lch(var(--black_lch) var(--black_alpha));
 }

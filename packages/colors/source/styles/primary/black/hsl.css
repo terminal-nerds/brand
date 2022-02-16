@@ -2,6 +2,9 @@
 	--black_hue: 0deg;
 	--black_saturation: 0%;
 	--black_lightness: 23.137%;
-	--black_hsl: var(--black_hue) var(--black_saturation) var(--black_lightness);
-	--black: hsl(var(--black_hsl));
+	--black_alpha: 1;
+
+	/* prettier-ignore */
+	--black_hsl: var(--black_lightness) var(--black_hue) var(--black_saturation);
+	--black: hsl(var(--black_hsl) var(--black_alpha));
 }

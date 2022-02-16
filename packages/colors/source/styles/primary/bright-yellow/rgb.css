@@ -2,6 +2,9 @@
 	--bright-yellow_red: 200;
 	--bright-yellow_green: 158;
 	--bright-yellow_blue: 74;
+	--bright-yellow_alpha: 1;
+
+	/* prettier-ignore */
 	--bright-yellow_rgb: var(--bright-yellow_red) var(--bright-yellow_green) var(--bright-yellow_blue);
-	--bright-yellow: rgb(var(--bright-yellow_rgb));
+	--bright-yellow: rgb(var(--bright-yellow_rgb) var(--bright-yellow_alpha));
 }

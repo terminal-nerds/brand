@@ -2,78 +2,108 @@
 	--gray-50_hue: 0deg;
 	--gray-50_saturation: 0%;
 	--gray-50_lightness: 98.039%;
-	--gray-50_hsl: var(--gray-50_hue) var(--gray-50_saturation) var(--gray-50_lightness);
-	--gray-50: hsl(var(--gray-50_hsl));
+	--gray-50_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-50_hsl: var(--gray-50_lightness) var(--gray-50_hue) var(--gray-50_saturation);
+	--gray-50: hsl(var(--gray-50_hsl) var(--gray-50_alpha));
 }
 
 :root {
 	--gray-100_hue: 0deg;
 	--gray-100_saturation: 0%;
 	--gray-100_lightness: 92.941%;
-	--gray-100_hsl: var(--gray-100_hue) var(--gray-100_saturation) var(--gray-100_lightness);
-	--gray-100: hsl(var(--gray-100_hsl));
+	--gray-100_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-100_hsl: var(--gray-100_lightness) var(--gray-100_hue) var(--gray-100_saturation);
+	--gray-100: hsl(var(--gray-100_hsl) var(--gray-100_alpha));
 }
 
 :root {
 	--gray-200_hue: 0deg;
 	--gray-200_saturation: 0%;
 	--gray-200_lightness: 83.137%;
-	--gray-200_hsl: var(--gray-200_hue) var(--gray-200_saturation) var(--gray-200_lightness);
-	--gray-200: hsl(var(--gray-200_hsl));
+	--gray-200_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-200_hsl: var(--gray-200_lightness) var(--gray-200_hue) var(--gray-200_saturation);
+	--gray-200: hsl(var(--gray-200_hsl) var(--gray-200_alpha));
 }
 
 :root {
 	--gray-300_hue: 0deg;
 	--gray-300_saturation: 0%;
 	--gray-300_lightness: 73.725%;
-	--gray-300_hsl: var(--gray-300_hue) var(--gray-300_saturation) var(--gray-300_lightness);
-	--gray-300: hsl(var(--gray-300_hsl));
+	--gray-300_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-300_hsl: var(--gray-300_lightness) var(--gray-300_hue) var(--gray-300_saturation);
+	--gray-300: hsl(var(--gray-300_hsl) var(--gray-300_alpha));
 }
 
 :root {
 	--gray-400_hue: 0deg;
 	--gray-400_saturation: 0%;
 	--gray-400_lightness: 64.314%;
-	--gray-400_hsl: var(--gray-400_hue) var(--gray-400_saturation) var(--gray-400_lightness);
-	--gray-400: hsl(var(--gray-400_hsl));
+	--gray-400_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-400_hsl: var(--gray-400_lightness) var(--gray-400_hue) var(--gray-400_saturation);
+	--gray-400: hsl(var(--gray-400_hsl) var(--gray-400_alpha));
 }
 
 :root {
 	--gray-500_hue: 0deg;
 	--gray-500_saturation: 0%;
 	--gray-500_lightness: 54.51%;
-	--gray-500_hsl: var(--gray-500_hue) var(--gray-500_saturation) var(--gray-500_lightness);
-	--gray-500: hsl(var(--gray-500_hsl));
+	--gray-500_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-500_hsl: var(--gray-500_lightness) var(--gray-500_hue) var(--gray-500_saturation);
+	--gray-500: hsl(var(--gray-500_hsl) var(--gray-500_alpha));
 }
 
 :root {
 	--gray-600_hue: 0deg;
 	--gray-600_saturation: 0%;
 	--gray-600_lightness: 44.706%;
-	--gray-600_hsl: var(--gray-600_hue) var(--gray-600_saturation) var(--gray-600_lightness);
-	--gray-600: hsl(var(--gray-600_hsl));
+	--gray-600_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-600_hsl: var(--gray-600_lightness) var(--gray-600_hue) var(--gray-600_saturation);
+	--gray-600: hsl(var(--gray-600_hsl) var(--gray-600_alpha));
 }
 
 :root {
 	--gray-700_hue: 0deg;
 	--gray-700_saturation: 0%;
 	--gray-700_lightness: 37.255%;
-	--gray-700_hsl: var(--gray-700_hue) var(--gray-700_saturation) var(--gray-700_lightness);
-	--gray-700: hsl(var(--gray-700_hsl));
+	--gray-700_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-700_hsl: var(--gray-700_lightness) var(--gray-700_hue) var(--gray-700_saturation);
+	--gray-700: hsl(var(--gray-700_hsl) var(--gray-700_alpha));
 }
 
 :root {
 	--gray-800_hue: 0deg;
 	--gray-800_saturation: 0%;
 	--gray-800_lightness: 29.412%;
-	--gray-800_hsl: var(--gray-800_hue) var(--gray-800_saturation) var(--gray-800_lightness);
-	--gray-800: hsl(var(--gray-800_hsl));
+	--gray-800_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-800_hsl: var(--gray-800_lightness) var(--gray-800_hue) var(--gray-800_saturation);
+	--gray-800: hsl(var(--gray-800_hsl) var(--gray-800_alpha));
 }
 
 :root {
 	--gray-900_hue: 0deg;
 	--gray-900_saturation: 0%;
 	--gray-900_lightness: 23.137%;
-	--gray-900_hsl: var(--gray-900_hue) var(--gray-900_saturation) var(--gray-900_lightness);
-	--gray-900: hsl(var(--gray-900_hsl));
+	--gray-900_alpha: 1;
+
+	/* prettier-ignore */
+	--gray-900_hsl: var(--gray-900_lightness) var(--gray-900_hue) var(--gray-900_saturation);
+	--gray-900: hsl(var(--gray-900_hsl) var(--gray-900_alpha));
 }

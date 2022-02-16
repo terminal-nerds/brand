@@ -5,13 +5,9 @@ import type {
 	ColorFunction,
 	ColorSettings,
 	HEX,
-	HEXA,
 	HSL,
-	HSLA,
 	LCH,
-	LCHA,
 	RGB,
-	RGBA,
 } from "$helpers/color-settings";
 import {
 	createCSSVariablesHEX,
@@ -50,20 +46,13 @@ export class ColorParameters implements ColorSettings {
 		this.blue = settings.blue;
 	}
 
-	get hexa(): HEXA {
-		return `${this.hex}FF`;
-	}
-
 	get hsl(): HSL {
 		return {
 			hue: this.hue,
 			saturation: this.saturation,
 			lightness: this.lightness,
+			alpha: this.alpha,
 		};
-	}
-
-	get hsla(): HSLA {
-		return { ...this.hsl, alpha: this.alpha };
 	}
 
 	get lch(): LCH {
@@ -71,11 +60,8 @@ export class ColorParameters implements ColorSettings {
 			lightness: this.lightness,
 			chroma: this.chroma,
 			hue: this.hue,
+			alpha: this.alpha,
 		};
-	}
-
-	get lcha(): LCHA {
-		return { ...this.lch, alpha: this.alpha };
 	}
 
 	get rgb(): RGB {
@@ -83,11 +69,8 @@ export class ColorParameters implements ColorSettings {
 			red: this.red,
 			green: this.green,
 			blue: this.blue,
+			alpha: this.alpha,
 		};
-	}
-
-	get rgba(): RGBA {
-		return { ...this.rgb, alpha: this.alpha };
 	}
 
 	createCSSVariables(name: string, colorFunction: ColorFunction) {
@@ -97,29 +80,17 @@ export class ColorParameters implements ColorSettings {
 			case "hex": {
 				return createCSSVariablesHEX(name, this.hex);
 			}
-			case "hexa": {
-				return createCSSVariablesHEX(name, this.hexa);
-			}
 
 			case "hsl": {
 				return createCSSVariablesHSL(name, this.hsl);
-			}
-			case "hsla": {
-				return createCSSVariablesHSL(name, this.hsla, true);
 			}
 
 			case "lch": {
 				return createCSSVariablesLCH(name, this.lch);
 			}
-			case "lcha": {
-				return createCSSVariablesLCH(name, this.lcha, true);
-			}
 
 			case "rgb": {
 				return createCSSVariablesRGB(name, this.rgb);
-			}
-			case "rgba": {
-				return createCSSVariablesRGB(name, this.rgba, true);
 			}
 		}
 	}

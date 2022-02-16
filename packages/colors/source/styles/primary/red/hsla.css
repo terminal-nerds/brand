@@ -1,9 +1,0 @@
-:root {
-	--red_hue: 4.8deg;
-	--red_saturation: 76.531%;
-	--red_lightness: 61.569%;
-	--red_alpha: 1;
-	--red_hsl: var(--red_hue) var(--red_saturation) var(--red_lightness);
-	--red_hsla: var(--red_hsl) / var(--red_alpha);
-	--red: hsla(var(--red_hsla));
-}

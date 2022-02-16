@@ -2,6 +2,9 @@
 	--red_lightness: 61.569%;
 	--red_chroma: 62.949%;
 	--red_hue: 4.8deg;
+	--red_alpha: 1;
+
+	/* prettier-ignore */
 	--red_lch: var(--red_lightness) var(--red_chroma) var(--red_hue);
-	--red: lch(var(--red_lch));
+	--red: lch(var(--red_lch) var(--red_alpha));
 }

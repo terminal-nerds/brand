@@ -1,9 +1,0 @@
-:root {
-	--black_lightness: 23.137%;
-	--black_chroma: 0%;
-	--black_hue: 0deg;
-	--black_alpha: 1;
-	--black_lch: var(--black_lightness) var(--black_chroma) var(--black_hue);
-	--black_lcha: var(--black_lch) / var(--black_alpha);
-	--black: lch(var(--black_lch));
-}

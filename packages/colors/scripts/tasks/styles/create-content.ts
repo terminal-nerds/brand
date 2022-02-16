@@ -31,7 +31,7 @@ export function createColorsPaletteCSSContent() {
 
 			outputs.set(
 				`${color}_${colorFunction}`,
-				[...swatchesOutputs].join("\n\n"),
+				[...swatchesOutputs].join("\n"),
 			);
 		}
 	}

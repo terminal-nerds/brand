@@ -1,9 +1,0 @@
-:root {
-	--yellow_red: 178;
-	--yellow_green: 131;
-	--yellow_blue: 6;
-	--yellow_alpha: 1;
-	--yellow_rgb: var(--yellow_red) var(--yellow_green) var(--yellow_blue);
-	--yellow_rgba: var(--yellow_rgb) / var(--yellow_alpha);
-	--yellow: rgba(var(--yellow_rgba));
-}

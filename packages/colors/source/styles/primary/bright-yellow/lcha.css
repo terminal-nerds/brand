@@ -1,9 +1,0 @@
-:root {
-	--bright-yellow_lightness: 53.725%;
-	--bright-yellow_chroma: 49.203%;
-	--bright-yellow_hue: 40deg;
-	--bright-yellow_alpha: 1;
-	--bright-yellow_lch: var(--bright-yellow_lightness) var(--bright-yellow_chroma) var(--bright-yellow_hue);
-	--bright-yellow_lcha: var(--bright-yellow_lch) / var(--bright-yellow_alpha);
-	--bright-yellow: lch(var(--bright-yellow_lch));
-}

@@ -1,9 +1,0 @@
-:root {
-	--bright-yellow_red: 200;
-	--bright-yellow_green: 158;
-	--bright-yellow_blue: 74;
-	--bright-yellow_alpha: 1;
-	--bright-yellow_rgb: var(--bright-yellow_red) var(--bright-yellow_green) var(--bright-yellow_blue);
-	--bright-yellow_rgba: var(--bright-yellow_rgb) / var(--bright-yellow_alpha);
-	--bright-yellow: rgba(var(--bright-yellow_rgba));
-}

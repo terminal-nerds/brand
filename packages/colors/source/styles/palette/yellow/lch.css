@@ -2,78 +2,108 @@
 	--yellow-50_lightness: 97.647%;
 	--yellow-50_chroma: 2.468%;
 	--yellow-50_hue: 30deg;
+	--yellow-50_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-50_lch: var(--yellow-50_lightness) var(--yellow-50_chroma) var(--yellow-50_hue);
-	--yellow-50: lch(var(--yellow-50_lch));
+	--yellow-50: lch(var(--yellow-50_lch) var(--yellow-50_alpha));
 }
 
 :root {
 	--yellow-100_lightness: 91.765%;
 	--yellow-100_chroma: 9.308%;
 	--yellow-100_hue: 34.286deg;
+	--yellow-100_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-100_lch: var(--yellow-100_lightness) var(--yellow-100_chroma) var(--yellow-100_hue);
-	--yellow-100: lch(var(--yellow-100_lch));
+	--yellow-100: lch(var(--yellow-100_lch) var(--yellow-100_alpha));
 }
 
 :root {
 	--yellow-200_lightness: 79.216%;
 	--yellow-200_chroma: 22.747%;
 	--yellow-200_hue: 36.563deg;
+	--yellow-200_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-200_lch: var(--yellow-200_lightness) var(--yellow-200_chroma) var(--yellow-200_hue);
-	--yellow-200: lch(var(--yellow-200_lch));
+	--yellow-200: lch(var(--yellow-200_lch) var(--yellow-200_alpha));
 }
 
 :root {
 	--yellow-300_lightness: 66.863%;
 	--yellow-300_chroma: 36.146%;
 	--yellow-300_hue: 37.732deg;
+	--yellow-300_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-300_lch: var(--yellow-300_lightness) var(--yellow-300_chroma) var(--yellow-300_hue);
-	--yellow-300: lch(var(--yellow-300_lch));
+	--yellow-300: lch(var(--yellow-300_lch) var(--yellow-300_alpha));
 }
 
 :root {
 	--yellow-400_lightness: 53.725%;
 	--yellow-400_chroma: 49.203%;
 	--yellow-400_hue: 40deg;
+	--yellow-400_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-400_lch: var(--yellow-400_lightness) var(--yellow-400_chroma) var(--yellow-400_hue);
-	--yellow-400: lch(var(--yellow-400_lch));
+	--yellow-400: lch(var(--yellow-400_lch) var(--yellow-400_alpha));
 }
 
 :root {
 	--yellow-500_lightness: 36.078%;
 	--yellow-500_chroma: 62.782%;
 	--yellow-500_hue: 43.605deg;
+	--yellow-500_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-500_lch: var(--yellow-500_lightness) var(--yellow-500_chroma) var(--yellow-500_hue);
-	--yellow-500: lch(var(--yellow-500_lch));
+	--yellow-500: lch(var(--yellow-500_lch) var(--yellow-500_alpha));
 }
 
 :root {
 	--yellow-600_lightness: 31.373%;
 	--yellow-600_chroma: 52.236%;
 	--yellow-600_hue: 42.727deg;
+	--yellow-600_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-600_lch: var(--yellow-600_lightness) var(--yellow-600_chroma) var(--yellow-600_hue);
-	--yellow-600: lch(var(--yellow-600_lch));
+	--yellow-600: lch(var(--yellow-600_lch) var(--yellow-600_alpha));
 }
 
 :root {
 	--yellow-700_lightness: 27.059%;
 	--yellow-700_chroma: 43.597%;
 	--yellow-700_hue: 42.115deg;
+	--yellow-700_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-700_lch: var(--yellow-700_lightness) var(--yellow-700_chroma) var(--yellow-700_hue);
-	--yellow-700: lch(var(--yellow-700_lch));
+	--yellow-700: lch(var(--yellow-700_lch) var(--yellow-700_alpha));
 }
 
 :root {
 	--yellow-800_lightness: 22.157%;
 	--yellow-800_chroma: 34.217%;
 	--yellow-800_hue: 41.299deg;
+	--yellow-800_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-800_lch: var(--yellow-800_lightness) var(--yellow-800_chroma) var(--yellow-800_hue);
-	--yellow-800: lch(var(--yellow-800_lch));
+	--yellow-800: lch(var(--yellow-800_lch) var(--yellow-800_alpha));
 }
 
 :root {
 	--yellow-900_lightness: 18.039%;
 	--yellow-900_chroma: 26.923%;
 	--yellow-900_hue: 40.345deg;
+	--yellow-900_alpha: 1;
+
+	/* prettier-ignore */
 	--yellow-900_lch: var(--yellow-900_lightness) var(--yellow-900_chroma) var(--yellow-900_hue);
-	--yellow-900: lch(var(--yellow-900_lch));
+	--yellow-900: lch(var(--yellow-900_lch) var(--yellow-900_alpha));
 }

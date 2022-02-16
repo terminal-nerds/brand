@@ -2,6 +2,9 @@
 	--magenta_red: 173;
 	--magenta_green: 113;
 	--magenta_blue: 219;
+	--magenta_alpha: 1;
+
+	/* prettier-ignore */
 	--magenta_rgb: var(--magenta_red) var(--magenta_green) var(--magenta_blue);
-	--magenta: rgb(var(--magenta_rgb));
+	--magenta: rgb(var(--magenta_rgb) var(--magenta_alpha));
 }

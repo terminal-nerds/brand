@@ -1,9 +1,0 @@
-:root {
-	--bright-white_hue: 0deg;
-	--bright-white_saturation: 0%;
-	--bright-white_lightness: 92.941%;
-	--bright-white_alpha: 1;
-	--bright-white_hsl: var(--bright-white_hue) var(--bright-white_saturation) var(--bright-white_lightness);
-	--bright-white_hsla: var(--bright-white_hsl) / var(--bright-white_alpha);
-	--bright-white: hsla(var(--bright-white_hsla));
-}

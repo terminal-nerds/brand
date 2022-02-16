@@ -2,6 +2,9 @@
 	--bright-green_hue: 94.588deg;
 	--bright-green_saturation: 35.565%;
 	--bright-green_lightness: 53.137%;
-	--bright-green_hsl: var(--bright-green_hue) var(--bright-green_saturation) var(--bright-green_lightness);
-	--bright-green: hsl(var(--bright-green_hsl));
+	--bright-green_alpha: 1;
+
+	/* prettier-ignore */
+	--bright-green_hsl: var(--bright-green_lightness) var(--bright-green_hue) var(--bright-green_saturation);
+	--bright-green: hsl(var(--bright-green_hsl) var(--bright-green_alpha));
 }

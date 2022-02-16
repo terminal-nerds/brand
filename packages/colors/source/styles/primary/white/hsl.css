@@ -2,6 +2,9 @@
 	--white_hue: 0deg;
 	--white_saturation: 0%;
 	--white_lightness: 98.039%;
-	--white_hsl: var(--white_hue) var(--white_saturation) var(--white_lightness);
-	--white: hsl(var(--white_hsl));
+	--white_alpha: 1;
+
+	/* prettier-ignore */
+	--white_hsl: var(--white_lightness) var(--white_hue) var(--white_saturation);
+	--white: hsl(var(--white_hsl) var(--white_alpha));
 }

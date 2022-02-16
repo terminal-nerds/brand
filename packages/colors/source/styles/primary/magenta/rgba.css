@@ -1,9 +1,0 @@
-:root {
-	--magenta_red: 173;
-	--magenta_green: 113;
-	--magenta_blue: 219;
-	--magenta_alpha: 1;
-	--magenta_rgb: var(--magenta_red) var(--magenta_green) var(--magenta_blue);
-	--magenta_rgba: var(--magenta_rgb) / var(--magenta_alpha);
-	--magenta: rgba(var(--magenta_rgba));
-}
