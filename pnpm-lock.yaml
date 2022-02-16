@@ -1,5 +1,8 @@
 lockfileVersion: 5.3
 
+overrides:
+  ansi-regex@>2.1.1 <5.0.1: '>=5.0.1'
+
 importers:
 
   .:
@@ -66,7 +69,7 @@ importers:
       '@types/fs-extra': 9.0.13
       '@types/node': 17.0.18
       '@types/postcss-import': 14.0.0
-      '@types/prettier': ^2.4.4
+      '@types/prettier': 2.4.4
       '@workspace/helpers': workspace:*
       case: 1.6.3
       chroma-js: 2.4.2
@@ -785,11 +788,6 @@ packages:
       type-fest: 0.21.3
     dev: true
 
-  /ansi-regex/3.0.0:
-    resolution: {integrity: sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=}
-    engines: {node: '>=4'}
-    dev: true
-
   /ansi-regex/5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -803,7 +801,7 @@ packages:
   /ansi-split/1.0.1:
     resolution: {integrity: sha512-RRxQym4DFtDNmHIkW6aeFVvrXURb11lGAEPXNiryjCe8bK8RsANjzJ0M2aGOkvBYwP4Bl/xZ8ijtr6D3j1x/eg==}
     dependencies:
-      ansi-regex: 3.0.0
+      ansi-regex: 6.0.1
     dev: true
 
   /ansi-styles/3.2.1:
