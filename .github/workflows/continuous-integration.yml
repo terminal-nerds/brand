@@ -43,7 +43,7 @@ jobs:
 
             - name: Setup Node.js version ${{ matrix.node-version }}
               # https://github.com/actions/setup-node
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v3
               with:
                   cache: "pnpm"
                   node-version: ${{ matrix.node-version }}
@@ -85,7 +85,7 @@ jobs:
 
             - name: Setup Node.js version ${{ matrix.node-version }}
               # https://github.com/actions/setup-node
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v3
               with:
                   cache: "pnpm"
                   node-version: ${{ matrix.node-version }}
@@ -123,7 +123,7 @@ jobs:
 
             - name: Setup Node.js version ${{ matrix.node-version }}
               # https://github.com/actions/setup-node
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v3
               with:
                   cache: "pnpm"
                   node-version: ${{ matrix.node-version }}
@@ -162,7 +162,7 @@ jobs:
 
             - name: Setup Node.js version ${{ matrix.node-version }}
               # https://github.com/actions/setup-node
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v3
               with:
                   cache: "pnpm"
                   node-version: ${{ matrix.node-version }}
@@ -203,7 +203,7 @@ jobs:
 
             - name: Setup Node.js version ${{ matrix.node-version }}
               # https://github.com/actions/setup-node
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v3
               with:
                   cache: "pnpm"
                   node-version: ${{ matrix.node-version }}
