@@ -29,7 +29,7 @@ jobs:
         steps:
             - name: Checkout to ${{ github.repository }} repository
               # https://github.com/actions/checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
               with:
                   fetch-depth: 0
                   ref: ${{ github.head_ref }}
@@ -71,7 +71,7 @@ jobs:
         steps:
             - name: Checkout to ${{ github.repository }} repository
               # https://github.com/actions/checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
               with:
                   fetch-depth: 0
                   ref: ${{ github.head_ref }}
@@ -109,7 +109,7 @@ jobs:
         steps:
             - name: Checkout to ${{ github.repository }} repository
               # https://github.com/actions/checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
               with:
                   fetch-depth: 0
                   ref: ${{ github.head_ref }}
@@ -148,7 +148,7 @@ jobs:
         steps:
             - name: Checkout to ${{ github.repository }} repository
               # https://github.com/actions/checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
               with:
                   fetch-depth: 0
                   ref: ${{ github.head_ref }}
@@ -189,7 +189,7 @@ jobs:
         steps:
             - name: Checkout to ${{ github.repository }} repository
               # https://github.com/actions/checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
               with:
                   ref: ${{ github.head_ref }}
                   fetch-depth: 0
