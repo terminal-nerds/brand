@@ -210,7 +210,7 @@ jobs:
 
             - name: Download built packages
               # https://github.com/actions/download-artifact
-              uses: actions/download-artifact@v2
+              uses: actions/download-artifact@v3
 
             - name: Extract built packages
               run: ./.github/extract-built-packages.sh
