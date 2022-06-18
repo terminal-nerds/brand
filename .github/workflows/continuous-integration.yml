@@ -36,7 +36,7 @@ jobs:
 
             - name: Use pnpm version ${{ matrix.pnpm-version }}
               # https://github.com/pnpm/action-setup
-              uses: pnpm/action-setup@v2.0.1
+              uses: pnpm/action-setup@v2.2.2
               with:
                   run_install: true
                   version: ${{ matrix.pnpm-version }}
@@ -78,7 +78,7 @@ jobs:
 
             - name: Use pnpm version ${{ matrix.pnpm-version }}
               # https://github.com/pnpm/action-setup
-              uses: pnpm/action-setup@v2.0.1
+              uses: pnpm/action-setup@v2.2.2
               with:
                   run_install: true
                   version: ${{ matrix.pnpm-version }}
@@ -116,7 +116,7 @@ jobs:
 
             - name: Use pnpm version ${{ matrix.pnpm-version }}
               # https://github.com/pnpm/action-setup
-              uses: pnpm/action-setup@v2.0.1
+              uses: pnpm/action-setup@v2.2.2
               with:
                   run_install: true
                   version: ${{ matrix.pnpm-version }}
@@ -155,7 +155,7 @@ jobs:
 
             - name: Use pnpm version ${{ matrix.pnpm-version }}
               # https://github.com/pnpm/action-setup
-              uses: pnpm/action-setup@v2.0.1
+              uses: pnpm/action-setup@v2.2.2
               with:
                   run_install: true
                   version: ${{ matrix.pnpm-version }}
@@ -196,7 +196,7 @@ jobs:
 
             - name: Use pnpm version ${{ matrix.pnpm-version }}
               # https://github.com/pnpm/action-setup
-              uses: pnpm/action-setup@v2.0.1
+              uses: pnpm/action-setup@v2.2.2
               with:
                   run_install: true
                   version: ${{ matrix.pnpm-version }}
